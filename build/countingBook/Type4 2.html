@@ -1,0 +1,643 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Type 4 - Selection With Repetition &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.8ac5fc15dd0c9c26.css?v=3287D97E" />
+
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.46feaa1582dad0f9.bundle.js?v=23EF70E9"></script>
+    <script src="_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="_static/runestone.e81005127a61c5fc.bundle.js?v=9BA4BB46"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The ABCDEs of Counting" href="UsingAnalysisTool.html" />
+    <link rel="prev" title="Type 3 - Selection Without Repetition - Combinations" href="Type3Part2.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.3.11';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=countingBook&page=Type4'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - Type 3 - Selection Without Repetition - Combinations" data-toggle="tooltip">
+    <a href="Type3Part2.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - The ABCDEs of Counting' data-toggle="tooltip" >              
+    <a href="UsingAnalysisTool.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="type-4-selection-with-repetition">
+<h1>Type 4 - Selection With Repetition<a class="headerlink" href="#type-4-selection-with-repetition" title="Permalink to this heading">¶</a></h1>
+<p>In this section, we present some tasks involving selection with repetition problems.
+In our 2x2 grid, this is the cell in which repetition is allowed, and we are
+counting unordered outcomes. Essentially, we are counting multi-sets, or sets in which
+multiple elements are allowed. In problems like these, we can again employ multi-stage
+processes, where elements can be repeated. For instance, we can count something like
+111, 112, 233, etc. However, in addition, we must consider duplicate outcomes, as
+we do not want to count ordered outcomes, but rather unordered outcomes. For instance,
+in counting ordered outcomes, we might count 112, 121, and 211 as distinct outcomes.
+In counting unordered outcomes, we do not consider those as distinct; they are all the
+same multi-set {1, 1, 2}. Like we did with type 3 problems (selection without repetition),
+we can reframe unordered as uniquely ordered.</p>
+<p>A typical problem of this type involves selecting some set of objects from different
+types of objects, as that suggests that objects can be repeated. For example, consider
+the following problem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>There are six different types of hotdogs (regular (R), chili (C), footlong
+(F), deluxe (D), spicy (S), and bratwurst(B)), and you are buying three
+hotdogs to share with your two friends. How many possibilities are there for
+which kinds of hotdogs you select, if it is undecided who will get which dog?
+</pre></div>
+</div>
+<p>Because it is undecided who will get each dog, the order that you pick the hot dogs
+doesn’t matter.
+Let us think of what kinds of outcomes we could have. You could buy three regular,
+which would suggest an outcome like RRR, or chili (CCC), or you could buy two
+footlongs and one deluxe (FFD). Notably, you are only counting how many
+possible outcomes there are - you don’t care who gets which hot dog, so there is no
+distinction between two footlong hot dogs, say (so, FFD and FDF are the same outcome).
+In this way, we can see that the outcomes are multisets - sets of hot dogs where
+repetition is allowed. The outcomes can be encoded as three-letter sequences from the
+letters R, C, F, D, S, B, where repetition is allowed. The question now is, how many
+such outcomes are there? We will answer this in this section.</p>
+<p>We can be clever in how we represent our hot dogs. If we consider the six
+different kinds of hot dogs as being represented by the numbers 1, 2, 3, 4, 5, and 6,
+then let us consider what different outcomes might be. Now the outcomes can be
+thought of as non-decreasing sequences of length 3. A non-decreasing differs from
+an increasing sequence because a non-decreasing sequence can repeat numbers; for
+example, 1 1 2 is non-decreasing because it does not decrease, but it is not strictly increasing
+because a number is repeated. Indeed, an equivalent way to frame
+this question is to ask the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>How many non-decreasing sequences of length three are there from the
+numbers 1 through 6?”
+</pre></div>
+</div>
+<p>Here are the outcomes. We’ve listed them so that each row corresponds to all
+outcomes starting with a particular number.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">111</span><span class="p">,</span> <span class="mi">222</span><span class="p">,</span> <span class="mi">333</span><span class="p">,</span> <span class="mi">444</span><span class="p">,</span> <span class="mi">555</span><span class="p">,</span> <span class="mi">666</span><span class="p">,</span>
+<span class="mi">112</span><span class="p">,</span> <span class="mi">223</span><span class="p">,</span> <span class="mi">334</span><span class="p">,</span> <span class="mi">445</span><span class="p">,</span> <span class="mi">556</span><span class="p">,</span>
+<span class="mi">113</span><span class="p">,</span> <span class="mi">224</span><span class="p">,</span> <span class="mi">335</span><span class="p">,</span> <span class="mi">446</span><span class="p">,</span> <span class="mi">566</span><span class="p">,</span>
+<span class="mi">114</span><span class="p">,</span> <span class="mi">225</span><span class="p">,</span> <span class="mi">336</span><span class="p">,</span> <span class="mi">455</span><span class="p">,</span>
+<span class="mi">115</span><span class="p">,</span> <span class="mi">226</span><span class="p">,</span> <span class="mi">344</span><span class="p">,</span> <span class="mi">456</span><span class="p">,</span>
+<span class="mi">116</span><span class="p">,</span> <span class="mi">233</span><span class="p">,</span> <span class="mi">345</span><span class="p">,</span> <span class="mi">466</span><span class="p">,</span>
+<span class="mi">122</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">346</span><span class="p">,</span>
+<span class="mi">123</span><span class="p">,</span> <span class="mi">235</span><span class="p">,</span> <span class="mi">355</span><span class="p">,</span>
+<span class="mi">124</span><span class="p">,</span> <span class="mi">236</span><span class="p">,</span> <span class="mi">356</span><span class="p">,</span>
+<span class="mi">125</span><span class="p">,</span> <span class="mi">244</span><span class="p">,</span> <span class="mi">366</span><span class="p">,</span>
+<span class="mi">126</span><span class="p">,</span> <span class="mi">245</span><span class="p">,</span>
+<span class="mi">133</span><span class="p">,</span> <span class="mi">246</span><span class="p">,</span>
+<span class="mi">134</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span>
+<span class="mi">135</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span>
+<span class="mi">136</span><span class="p">,</span> <span class="mi">266</span><span class="p">,</span>
+<span class="mi">144</span><span class="p">,</span>
+<span class="mi">145</span><span class="p">,</span>
+<span class="mi">146</span><span class="p">,</span>
+<span class="mi">155</span><span class="p">,</span>
+<span class="mi">156</span><span class="p">,</span>
+<span class="mi">166</span>
+</pre></div>
+</div>
+<p>To be explicit about representing hot dogs in this way, note that for any choice
+of three hot dogs, it can correspond to a three-digit nondecreasing sequence. We
+could make the correspondence of R - 1, C - 2, F - 3, D - 4, S - 5, and B - 6. So
+an outcome like 255 would mean you bought a chili dog and two spicy dogs. We make
+this connection because we will write a program that counts non-decreasing sequences,
+and any such selection with repetition problem can be similarly encoded as
+non-decreasing sequences.</p>
+<p>In particular, the following code is written to list out all possible nondecreasing
+sequences of the numbers 1 through 6. Run this code. Do you get what you expect?</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type4.rst</span>, line 88)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Type_4_CodeSample1</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">after</span> <span class="n">index1</span>
+  <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">after</span> <span class="n">index2</span>
+
+</pre></div>
+</div>
+</aside>
+<p>Please answer the following questions about this code.</p>
+<section id="quick-check-1">
+<h2>Quick Check 1<a class="headerlink" href="#quick-check-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1" data-multipleanswers="false"  id="Type_4_MC1_1"  style="visibility: hidden;">
+    <p>Q-1: Given the correspondence of R - 1, C - 2, F - 3, D - 4, S - 5, and B - 6, suppose
+you bought two deluxe dogs and a bratwurst. How would you expect this outcome to
+show up in your list of outcomes?</p>
+
+    <li data-component="answer"  id="Type_4_MC1_1_opt_a">DDB</li><li data-component="feedback">Incorrect. The code produces sequences of numbers, not letters.</li>
+    
+    <li data-component="answer"  id="Type_4_MC1_1_opt_b">464</li><li data-component="feedback">Incorrect. We are counting nondecreasing sequences.</li>
+    
+    <li data-component="answer" data-correct='yes' id="Type_4_MC1_1_opt_c">446</li><li data-component="feedback">Correct. This is a nondecreasing sequence corresponding to two deluxe dogs and a bratwurst.</li>
+    
+    <li data-component="answer"  id="Type_4_MC1_1_opt_d">644</li><li data-component="feedback">Incorrect. We are counting nondecreasing sequences.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="quick-check-2">
+<h2>Quick Check 2<a class="headerlink" href="#quick-check-2" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>Which part of the code helps us ensure that the sequences we are counting are nondecreasing?</p>
+</div></blockquote>
+<section id="finding-a-general-solution">
+<h3>Finding a General Solution<a class="headerlink" href="#finding-a-general-solution" title="Permalink to this heading">¶</a></h3>
+<p>It is difficult to find a general solution for these types of problems if we only encode our outcomes
+as multisets (e.g. {R, R, C}) or as non-decreasing sequences (e.g. 1 1 2). Let’s
+introduce our final way to encode these outcomes, which is commonly referred to
+as stars and bars. Suppose we were ordering hotdogs, and we were given a piece
+of paper with each of the types of hotdogs on it. If we put tally marks under each
+type of dog to indicate the number of that type we wanted, we could represent our order
+something like this:</p>
+<a class="reference internal image-reference" href="_images/T4.png"><img alt="_images/T4.png" class="align-center" src="_images/T4.png" style="width: 400px;" /></a>
+<p>This order would indicate that we want two regular and one chili dog.
+When written exactly like this, there is quite a bit of information that is not relevant
+to counting. For example, the names of the types of hot dogs does not matter. If we
+know the order of the types of hot dogs in the top row, we really only need the bottom row, like so.</p>
+<img alt="_images/T4Encoded.png" class="align-center" src="_images/T4Encoded.png" />
+<p>So, we have stripped a lot of the unnecessary information away by representing
+our selection of hot dogs as an arrangement of three + signs and five bars.
+For the sake of writing on a keyboard, let’s change symbols. We will replace the <span class="math notranslate nohighlight">\(|\)</span> with
+a B, for bar, and we will replace the <span class="math notranslate nohighlight">\(+\)</span> with an s, for star. So, the
+way to write <span class="math notranslate nohighlight">\(++|+||||\)</span> will be ssBsBBBB.</p>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="2" id="Type4_starbar_interpret"  style="visibility: hidden;">
+            <p>Q-2: The way to represent two footlongs and a Bratwurst using the symbols
+s and B is <input type="text"> .</p>
+
+        <script type="application/json">
+            [[{"regex": "^\\s*BBssBBBs\\s*$", "regexFlags": "i", "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is BBsBBBs.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>Let’s focus on determining the number of bars. There are six types of hot dogs,
+and by using five Bs we can create the six columns needed for the hot dogs.
+In general, you will need one fewer
+B than columns (or category). Since we are choosing three hotdogs, we are placing
+three s’s among those five Bs. In general, you will need the same number of s’s
+as the number of items being selected.</p>
+<p>So, our outcomes now look like arrangements of five Bs and three s’s. Further,
+any such arrangement will produce a unique outcome, and we can represent every outcome
+like this. This tells us that the number of ways to choose three hot dogs from six
+types of hot dogs is the same number of ways to arrange three s’s and five
+Bs. This gives us eight objects total.
+Whenever we arrange three s’s and five Bs, we can think about putting
+these objects into eight positions, and wherever we place the three s’s we
+know the five Bs must fill in the remaining positions. Thus, there are
+<span class="math notranslate nohighlight">\({8\choose 3}\)</span> ways to arrange the s’s and Bs. This tells us that there
+are <span class="math notranslate nohighlight">\({8\choose 3}=56\)</span> ways to pick three hot dogs from six types of hot dogs.</p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3" data-multipleanswers="false"  id="Type_4_MC2_1"  style="visibility: hidden;">
+    <p>Q-3: The 8 in <span class="math notranslate nohighlight">\({8\choose 3}\)</span> is best described by which expression?</p>
+
+    <li data-component="answer"  id="Type_4_MC2_1_opt_a">11 - 3</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="Type_4_MC2_1_opt_b">4 + 4</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="Type_4_MC2_1_opt_c">5 + 3</li><li data-component="feedback">Close, but d better represents the 8.</li>
+    
+    <li data-component="answer" data-correct='yes' id="Type_4_MC2_1_opt_d">(6 - 1) + 3</li><li data-component="feedback">Correct</li>
+    
+
+    </ul>
+    </div>
+    <p>This method of representing outcomes as arrangements of s’s and Bs works best
+to create a general formula because we already know how to count them. Consider
+the general problem:</p>
+<blockquote>
+<div><p>Suppose there are <span class="math notranslate nohighlight">\(n\)</span> distinct types of objects, and you are selecting
+<span class="math notranslate nohighlight">\(k\)</span> objects (where you can select any number from each type). If the order
+of the objects being selected does not matter, how many ways are there to
+do this?</p>
+</div></blockquote>
+<p>We can think about how to represent our objects as s’s and Bs. To do so, we
+must figure out how many s’s and how many Bs we are arranging.
+The Bs are used to create columns, where you need one fewer B than you need
+columns. If we have <span class="math notranslate nohighlight">\(n\)</span> types of objects, we can represent a column for each
+type using <span class="math notranslate nohighlight">\(n-1\)</span> Bs. The s’s are used to represent how many of each type
+we are selecting. We need the same number of s’s as the number of objects
+we are selecting. So, if we are selecting <span class="math notranslate nohighlight">\(k\)</span> objects, then we need
+<span class="math notranslate nohighlight">\(k\)</span> s’s. Our final outcomes will be arrangements of <span class="math notranslate nohighlight">\(n-1\)</span> Bs
+and <span class="math notranslate nohighlight">\(k\)</span> s’s. So, there are <span class="math notranslate nohighlight">\(n+k-1\)</span> total objects which means we are
+placing <span class="math notranslate nohighlight">\(n-1\)</span> Bs and <span class="math notranslate nohighlight">\(k\)</span> s’s into <span class="math notranslate nohighlight">\(n+k-1\)</span> positions. There
+are <span class="math notranslate nohighlight">\({n+k-1\choose k}\)</span> ways to choose the positions of the s’s, and the
+rest of the positions will be filled in by the Bs. This gives us our general
+solution:</p>
+<blockquote>
+<div><p>Suppose there are <span class="math notranslate nohighlight">\(n\)</span> distinct types of objects, and you are selecting
+<span class="math notranslate nohighlight">\(k\)</span> objects (where you can select any number from each type). There are
+<span class="math notranslate nohighlight">\({n+k-1\choose k}\)</span> ways to do this.</p>
+</div></blockquote>
+</section>
+<section id="practice-problems">
+<h3>Practice Problems<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h3>
+<p>1.) Suppose there are 9 types of doughnuts at the bakery, and you are picking up
+4 for a meeting. Write code that will find the number of ways to do this.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type4.rst</span>, line 224)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Type_4_PP1</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">after</span> <span class="n">index1</span>
+  <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">after</span> <span class="n">index2</span>
+  <span class="p">:</span><span class="n">col4</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">after</span> <span class="n">index3</span>
+
+</pre></div>
+</div>
+</aside>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="4" id="Type4_PP1_2"  style="visibility: hidden;">
+            <p>Q-4: The total number of ways to select nine doughnuts from four types is <input type="text">.</p>
+
+        <script type="application/json">
+            [[{"number": [495, 495], "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is 495.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </section>
+</section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - Type 3 - Selection Without Repetition - Combinations' data-toggle="tooltip">
+  <a href="Type3Part2.html" aria-label="Previous - Type 3 - Selection Without Repetition - Combinations">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - The ABCDEs of Counting' data-toggle="tooltip" >
+    <a href="UsingAnalysisTool.html" aria-label="Next - The ABCDEs of Counting">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 PCAS.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.3.11.
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

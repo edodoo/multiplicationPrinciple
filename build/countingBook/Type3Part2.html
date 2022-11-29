@@ -1,0 +1,793 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Type 3 - Selection Without Repetition - Combinations &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.8ac5fc15dd0c9c26.css?v=3287D97E" />
+
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.46feaa1582dad0f9.bundle.js?v=23EF70E9"></script>
+    <script src="_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="_static/runestone.e81005127a61c5fc.bundle.js?v=9BA4BB46"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Type 4 - Selection With Repetition" href="Type4.html" />
+    <link rel="prev" title="Type 3 - Selection Without Repetition - Combinations" href="Type3.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.3.11';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=countingBook&page=Type3Part2'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - Type 3 - Selection Without Repetition - Combinations" data-toggle="tooltip">
+    <a href="Type3.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Type 4 - Selection With Repetition' data-toggle="tooltip" >              
+    <a href="Type4.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="type-3-selection-without-repetition-combinations">
+<h1>Type 3 - Selection Without Repetition - Combinations<a class="headerlink" href="#type-3-selection-without-repetition-combinations" title="Permalink to this heading">¶</a></h1>
+<p>In this section, we present some tasks involving selection without repetition problems.
+In our 2x2 grid, this is the cell in which repetition is not allowed, and we are
+counting unordered outcomes (or combinations). In problems like these, we can again
+employ multi-stage processes, where the number of options is reduced at each stage,
+because repetition is not allowed. However, in addition, we must avoid duplicate
+outcomes, as we do not want to count ordered outcomes, but rather unordered outcomes.
+For instance, in counting ordered outcomes, we might count 123, 132, 213, 231, 312,
+and 321 as distinct outcomes. In counting UNordered outcomes, we do not consider
+those as distinct; they are all the same set {1, 2, 3}. Thus, we need to account
+for duplicates when we count combinations.</p>
+<p>There are a couple of ways to handle this. First, we will discuss turning unordered
+outcomes into uniquely ordered outcomes. Then, we will discuss how to leverage division
+and equivalence in order to find a general formula.</p>
+<section id="combinations-turning-unordered-into-uniquely-ordered">
+<h2>Combinations - Turning UNordered into Uniquely Ordered<a class="headerlink" href="#combinations-turning-unordered-into-uniquely-ordered" title="Permalink to this heading">¶</a></h2>
+<p>Consider the following problem:</p>
+<blockquote>
+<div><p>1) Write out a list of unordered sets of two numbers from the numbers
+{1, 2, 3, 4, 5, 6}. How many are there?</p>
+</div></blockquote>
+<p>If we were to list these outcomes, we could start with the number 1, and pair it with 2
+through 6, yielding 12, 13, 14, 15, 16. (Note, we do not write 11, because repetition
+is not allowed). Then, we could move to the number 2, and pair it with numbers.
+We do not pair it with 21, because we already wrote 12, and we want unordered outcomes
+(so we do not want to count both 12 and 21). We also don’t want to write 22, as
+repetition is not allowed. So, we write 23, 24, 25, 26. Similar, we would list 34,
+35, 36, then 45, 46, and finally 56. An expression for the number of outcomes is
+thus <span class="math notranslate nohighlight">\(5+4+3+2+1 = 15\)</span>. This is reflected in the process of pairing 1 with any of
+the 5 numbers greater than it, then pairing 2 with any of the 4 numbers greater
+than it, and proceeding in that fashion.</p>
+<p>12, 23, 34, 45, 56</p>
+<p>13, 24, 35, 46</p>
+<p>14, 25, 36</p>
+<p>15, 26</p>
+<p>16</p>
+<p>For any unordered sequence of distinct numbers, there is only one way to write
+them in increasing order. By choosing to create sequences of
+numbers in increasing order, we are ensuring that we will never produce the same
+outcome twice. This is what we mean when we say “turning unordered into uniquely
+ordered.” If you are counting unordered objects, you can alternatively count
+the objects in a specific order, provided there is exactly one way to put
+them in that order. For example, alphabetical order is a way to order sequences
+of letters uniquely, and strictly increasing order is a way to order sequences of integers uniquely.
+The program below will generate exactly the
+combinations we want, which are strictly increasing sequences of numbers. The use
+of the if statement using <span class="math notranslate nohighlight">\(j &gt; i\)</span> ensures that the numbers in a given position will
+be greater than the values in all of the previous positions, and this means that we
+have strictly increasing sequences.</p>
+<p>Reflect on the outcomes of the program below, which answers the question “How many
+unordered sets of two numbers are there from the numbers {1, 2, 3, 4, 5, 6}?” Are you
+convinced that the output is giving you what you want it to? Why or why not? Do you
+see a structure of <span class="math notranslate nohighlight">\(5+4+3+2+1\)</span> in the outcomes?</p>
+</section>
+<section id="active-code-2">
+<h2>Active Code 2<a class="headerlink" href="#active-code-2" title="Permalink to this heading">¶</a></h2>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Type_3_CodeSample2_2 data-question_label="1">
+<div id=Type_3_CodeSample2_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Type_3_CodeSample2_2_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='Create some code'  data-wasm=/_static
+     style="visibility: hidden;">
+Numbers = [1, 2, 3, 4, 5, 6]
+counter = 0
+
+for i in Numbers:
+    for j in Numbers:
+        if j > i:
+            print(i,j)
+            counter += 1
+print(counter)
+</textarea>
+</div>
+</div>
+<p>Let us try to extend this idea by answering the following question:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>3. How many combinations of size 3 are there from the numbers {1, 2, 3, 4, 5, 6}?
+</pre></div>
+</div>
+<p>Here again we can consider a process of writing down outcomes. We can start with the
+number 1, and then pair it with 2, and then, since 1 and 2 have been used, we can
+pair 12 with 3, 4, 5, and 6. Then, we can pair 1 with 3, and then pair 13 with 4,
+5, and 6. Once we have exhausted all of the options starting with 1, we can move to 2,
+and start with 23 paired with 4, 5, and 6. We can proceed in this manner, again
+essentially creating 3-digit sequences that are strictly increasing.</p>
+<p>Note that there are <span class="math notranslate nohighlight">\(4+3+2+1\)</span> sets that start with 1, then <span class="math notranslate nohighlight">\(3+2+1\)</span> that
+start with 2, <span class="math notranslate nohighlight">\(2+1\)</span> that start with 3, and <span class="math notranslate nohighlight">\(1\)</span> that start with 4. Thus
+the overall expression that reflects this process is <span class="math notranslate nohighlight">\((4+3+2+1)+(3+2+1)+(2+1)+(1) = 20.\)</span></p>
+<p>The program below executes this idea. Note again that the conditional statements
+ensure the sequences will be strictly increasing. In the outcomes, we see
+this expression reflected in the structure of the outcomes.</p>
+</section>
+<section id="active-code-3">
+<h2>Active Code 3<a class="headerlink" href="#active-code-3" title="Permalink to this heading">¶</a></h2>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Type_3_CodeSample3_2 data-question_label="2">
+<div id=Type_3_CodeSample3_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Type_3_CodeSample3_2_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='Create some code'  data-wasm=/_static
+     style="visibility: hidden;">
+Numbers = [1, 2, 3, 4, 5, 6]
+counter = 0
+
+for i in Numbers:
+    for j in Numbers:
+        if j > i:
+            for k in Numbers:
+                if k > j:
+                    print(i,j,k,)
+                    counter += 1
+print(counter)
+</textarea>
+</div>
+</div>
+<p>Check your knowledge using the problem below:</p>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="3" id="Type_3_6choose3_2"  style="visibility: hidden;">
+            <p>Q-3: I think that <input type="text"> of the outcomes will start with “3”, and <input type="text"> of the outcomes will start with “3 4”.</p>
+
+        <script type="application/json">
+            [[{"number": [3, 3], "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is 3=2+1.</p>\n"}], [{"number": [1, 1], "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is 1.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </section>
+<section id="combinations-leveraging-division-and-equivalence">
+<h2>Combinations - Leveraging Division and Equivalence<a class="headerlink" href="#combinations-leveraging-division-and-equivalence" title="Permalink to this heading">¶</a></h2>
+<p>Focusing on outcomes is a great way to figure out what formula is appropriate to
+use, and why that formula can be applied. Because the above method looks at the
+outcomes being counted, it can be good to keep it in mind as a way of identifying
+problem types. However, for problems that involve three or more objects being selected,
+it can be tedious to use.
+Another way we can count this type of problem is to
+leverage division and equivalence in order to “uncount” all the repeated outcomes.
+This can be most easily seen in Type 2 problems - arrangements without
+repetition, also called permutations.</p>
+<p>For instance, suppose we want to select, but not arrange, 3 objects from 5 objects.
+That is, we want to count unordered outcomes of 3 objects chosen from 5 objects.
+To do this, let us first consider arranging objects, which we know can be done
+in <span class="math notranslate nohighlight">\(5 \cdot 4 \cdot 3 = \frac{5!}{2!} = 60\)</span> ways.</p>
+<p>If we look at the outcomes of this process, notice that we get outcomes like 123,
+132, 312, and 321. Run the next bit of code to check that we generated ordered outcomes.</p>
+</section>
+<section id="active-code-1">
+<h2>Active Code 1<a class="headerlink" href="#active-code-1" title="Permalink to this heading">¶</a></h2>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Type_3_CodeSample1_2 data-question_label="4">
+<div id=Type_3_CodeSample1_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Type_3_CodeSample1_2_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='Create some code'  data-wasm=/_static
+     style="visibility: hidden;">
+Numbers = [1, 2, 3, 4, 5]
+counter = 0
+
+for i in Numbers:
+    for j in Numbers:
+        if j != i:
+            for k in Numbers:
+                if k != j and k != i:
+                    print(i,j,k,)
+                    counter += 1
+print(counter)
+</textarea>
+</div>
+</div>
+<p>In the above problem, note that for any given set of digits, such as {1, 2, 3},
+there are 6 total outcomes in the list of ordered outcomes that contain these three digits.
+These are, specifically, 123, 132, 213, 231, 312, and 321. It makes sense that
+there are 6 such outcomes, as there are <span class="math notranslate nohighlight">\(3! = 3 \cdot 2 \cdot 1 = 6\)</span> arrangements
+of three distinct digits. Thus, for every set of numbers, there are 6 times as many
+ordered outcomes as there are unordered outcomes. For every 6, we want to count
+one outcome. Answer the following question:</p>
+</section>
+<section id="quick-check-1-1">
+<h2>Quick Check 1.1<a class="headerlink" href="#quick-check-1-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5" data-multipleanswers="false"  id="Type_3_MC1_1_2"  style="visibility: hidden;">
+    <p>Q-5: Scroll through the outcomes above and convince yourself that this is the case.
+Consider a set like {2, 4, 5}. In the output of the code above, how many outcomes
+contain a 2, 4, and 5?</p>
+
+    <li data-component="answer"  id="Type_3_MC1_1_2_opt_a">There are 3 outcomes that contain 2, 4, and 5.</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="Type_3_MC1_1_2_opt_b">There are 5 outcomes that contain 2, 4, and 5.</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="Type_3_MC1_1_2_opt_c">There are 6 outcomes that contain 2, 4, and 5.</li><li data-component="feedback">Correct.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="general-formula-for-selection-without-repetition">
+<h2>General formula for Selection without Repetition<a class="headerlink" href="#general-formula-for-selection-without-repetition" title="Permalink to this heading">¶</a></h2>
+<p>In general, if we are arranging <span class="math notranslate nohighlight">\(r\)</span> elements from <span class="math notranslate nohighlight">\(n\)</span> distinct elements,
+there will always be <span class="math notranslate nohighlight">\(r!\)</span> arrangements of any given <span class="math notranslate nohighlight">\(r\)</span> elements. So,
+if we want to count unordered rather than ordered outcomes, there will be <span class="math notranslate nohighlight">\(r!\)</span>
+times more ordered outcomes than unordered outcomes. We thus have the following
+general relationship for selecting <span class="math notranslate nohighlight">\(r\)</span> elements from <span class="math notranslate nohighlight">\(n\)</span> distinct elements:</p>
+<p>In particular, we get that <span class="math notranslate nohighlight">\((\text{Number of unordered outcomes})\cdot (\text{Number of ways to arrange } r \text{ elements} ) = (\text{Number of ordered outcomes})\)</span>,
+which we know to be the following:</p>
+<p><span class="math notranslate nohighlight">\((\text{Number of unordered outcomes}) \cdot r! = \frac{n!}{(n-r)!}\)</span>.</p>
+<p>Thus, the total <span class="math notranslate nohighlight">\((\text{Number of unordered outcomes}) = \frac{n!}{(n-r)!\cdot r!}.\)</span></p>
+<p>This is often denoted as <span class="math notranslate nohighlight">\(C(n,r)\)</span> and, more commonly as <span class="math notranslate nohighlight">\({n \choose r}\)</span>,
+which is said “<span class="math notranslate nohighlight">\(n\)</span> choose <span class="math notranslate nohighlight">\(r\)</span>.” So, <span class="math notranslate nohighlight">\({n \choose r} = \frac{n!}{(n-r)!\cdot r!}\)</span>.</p>
+<p>For example, consider the problem below.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. Nine horses compete in a beauty competition, and there will three identical
+prizes given. How many possibilities are there for which three horses receive prizes?
+</pre></div>
+</div>
+<p>If we want to select a set of three horses from a field of 9 horses to win a prize,
+we can take the number of ordered outcomes (which we know to be <span class="math notranslate nohighlight">\(9 \cdot 8 \cdot 7 =
+\frac{9!}{6!}\)</span>) and divide it by the number of ways to arrange three horses, which
+is <span class="math notranslate nohighlight">\(3!\)</span>. Thus, the total number of unordered outcomes is <span class="math notranslate nohighlight">\(\frac{9 \cdot 8 \cdot 7}{3!}
+= \frac{9!}{6!\cdot 3!} = {9 \choose 3} = 84\)</span>.</p>
+<p>Check your knowledge on the following problem.</p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6" data-multipleanswers="false"  id="QC_3_1_2"  style="visibility: hidden;">
+    <p>Q-6: If you have five types of vegetables, what is an expression that counts the number of ways to put two types of vegetables in a stew?</p>
+
+    <li data-component="answer"  id="QC_3_1_2_opt_a">5!/3!</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC_3_1_2_opt_b">(5*4)/(2*1)</li><li data-component="feedback">Correct.</li>
+    
+    <li data-component="answer"  id="QC_3_1_2_opt_c">5!/2!</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="some-practice-problems">
+<h2>Some Practice Problems<a class="headerlink" href="#some-practice-problems" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>4. There are 20 professors in a department, and a 4-person Graduate Committee
+must be formed. How many possibilities are there for who can be on the committee?
+</pre></div>
+</div>
+<p>Notice, a committee is an unordered outcome because all that matters for determining
+a committee is who is on the committee - different orders or arrangements of the
+committee members do not make distinct outcomes. So, we are counting 4-combinations
+chosen from 20 people.</p>
+<p>We can employ our general formula to get <span class="math notranslate nohighlight">\({20 \choose 4} = \frac{20!}{16!\cdot4!} = 4,845.\)</span></p>
+<p>We can check our work by running a program, as seen below.</p>
+</section>
+<section id="active-code-4">
+<h2>Active Code 4<a class="headerlink" href="#active-code-4" title="Permalink to this heading">¶</a></h2>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Type_3_CodeSample4_2 data-question_label="7">
+<div id=Type_3_CodeSample4_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Type_3_CodeSample4_2_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='Create some code'  data-wasm=/_static
+     style="visibility: hidden;">
+People = range(1,21)
+counter = 0
+
+for i in People:
+    for j in People:
+        if j > i:
+            for k in People:
+                if k > j:
+                    for l in People:
+                        if l > k:
+                            #print(i,j,k,l)
+                            counter += 1
+print(counter)
+</textarea>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>5. A Poker hand consists of a set of 5 cards from a standard 52-card deck.
+How many possible Poker hands are there?
+</pre></div>
+</div>
+<p>Here we must just choose 5 cards from 52 cards, so we get <span class="math notranslate nohighlight">\({52 \choose 5} =
+\frac{52!}{47!\cdot5!} = 2,598,960.\)</span></p>
+<p>The following code yields this same result.</p>
+</section>
+<section id="active-code-5">
+<h2>Active Code 5<a class="headerlink" href="#active-code-5" title="Permalink to this heading">¶</a></h2>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Type_3_CodeSample5_2 data-question_label="8">
+<div id=Type_3_CodeSample5_2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Type_3_CodeSample5_2_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+         data-caption='Create some code'  data-wasm=/_static
+     style="visibility: hidden;">
+Cards = range(1,53)
+counter = 0
+
+for i in Cards:
+    for j in Cards:
+        if j > i:
+            for k in Cards:
+                if k > j:
+                    for l in Cards:
+                        if l > k:
+                            for m in Cards:
+                                if m > l:
+                                    #print(i,j,k,l)
+                                    counter += 1
+print(counter)
+</textarea>
+</div>
+</div>
+<p>Many problems will not be only a direct application of this formula, but rather
+they will involve or incorporate the formula in some way into a broader problem.
+Here we offer some examples of how this formula might arise or be used in problems.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>5. I have 12 books. I want to give three of them away to my friend John, and I
+want to give six of them away to my friend Craig. How many possible outcomes are
+there for giving my books away?
+</pre></div>
+</div>
+<p>This counting process has a two-stage process. Note that I can first pick 3 of
+the 12 books to give to John. There are then 9 books left, and I can pick 6 of them
+to give to Craig. Since the number of outcomes at each stage is independent of
+previous choices, I can employ the Multiplication Principle. Thus I get that my
+answer is <span class="math notranslate nohighlight">\({12 \choose 3} \cdot {9 \choose 6} = 18,480\)</span>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>6. We have 6 Moms, 6 Dads, and 8 children to choose from. We need to make a
+committee of size 7, with exactly 2 Dads, 3 Moms, and 2 children. How many ways
+are there to do this?
+</pre></div>
+</div>
+<p>Solve the following Parson’s problem to create code that solves this problem.</p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="Type_3_Parson1_2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the lines below to create code to count the number of ways to make the committee specified in the problem.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="9"         data-numbered="left"  style="visibility: hidden;">
+        
+Dads = [1, 2, 3, 4, 5, 6]
+Moms = [1, 2, 3, 4, 5, 6]
+Kids = [1, 2, 3, 4, 5, 6, 7, 8]
+---
+counter = 0
+---
+for i in Dads:
+    for j in Dads:
+        if j > i:
+---
+            for k in Moms:
+                for l in Moms:
+                    if l > k:
+---
+                        for m in Moms:
+                            if m > l:
+---
+                                for n in Kids:
+                                    for o in Kids:
+                                        if o > n:
+---
+                                            #print(i,j,k,l,m,n,o)
+                                            counter += 1
+---=
+print(counter)
+        </pre>
+        </div>
+        </div>
+    <p>We can first pick 2 of the 6 Dads, then 3 of the 6 Moms, then 2 of the 8 children.
+Since the number of options at each stage is independent of any particular choice,
+we can employ the multiplication principle. We get an expression of
+<span class="math notranslate nohighlight">\({6 \choose 2} \cdot {6 \choose 3} \cdot {8 \choose 2} = 8,400\)</span>.</p>
+</section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - Type 3 - Selection Without Repetition - Combinations' data-toggle="tooltip">
+  <a href="Type3.html" aria-label="Previous - Type 3 - Selection Without Repetition - Combinations">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - Type 4 - Selection With Repetition' data-toggle="tooltip" >
+    <a href="Type4.html" aria-label="Next - Type 4 - Selection With Repetition">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 PCAS.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.3.11.
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

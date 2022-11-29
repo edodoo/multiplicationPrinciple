@@ -1,0 +1,1454 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Coordinating Fundamentals of Counting Problems &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.8ac5fc15dd0c9c26.css?v=3287D97E" />
+
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.46feaa1582dad0f9.bundle.js?v=23EF70E9"></script>
+    <script src="_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="_static/runestone.e81005127a61c5fc.bundle.js?v=9BA4BB46"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Combinatorics - Four Basic Problem Types" href="FourMainProblemTypes.html" />
+    <link rel="prev" title="The Multiplication Principle" href="Multiplication.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.3.11';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHNwYJKoZIhvcNAQcEoIIHKDCCByQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYAcrkqh1hn3lYqIpfXxNqe1T82EhXzCJGy1yMAmklpyZshyMkfDGe1Bhx+iwyGeoYRTTyphFmP+9M3NyO0+Q5XdHxgZPx/zYjjBxlZHgEV6jhE8bN2fHkkPf0VHfz0a0QQylQOPlKiOTZV7B37Jpk6yM47oVZ1tG/KNm0NkfmB76DELMAkGBSsOAwIaBQAwgbQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi0GmFfOlcjuAgZBbYOo9UO+CpMQa+PYqwsUmUnJvXIImeMeNI3KVTUx5Cfk9gNMo3WzPeiB5IqZo9nRAQ0mf1qL2ecLeB5tidM+lgBUhOxfj3/FecpnVFa0263gp4g+PLw8jzhvVRdUon1K3SeO1Rzh23fIRKwnrD6btt73uwtj0sl3tGd8qz+6GIcwPDdRk9VcUffiBJT/ZagKgggOHMIIDgzCCAuygAwIBAgIBADANBgkqhkiG9w0BAQUFADCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wHhcNMDQwMjEzMTAxMzE1WhcNMzUwMjEzMTAxMzE1WjCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMFHTt38RMxLXJyO2SmS+Ndl72T7oKJ4u4uw+6awntALWh03PewmIJuzbALScsTS4sZoS1fKciBGoh11gIfHzylvkdNe/hJl66/RGqrj5rFb08sAABNTzDTiqqNpJeBsYs/c2aiGozptX2RlnBktH+SUNpAajW724Nv2Wvhif6sFAgMBAAGjge4wgeswHQYDVR0OBBYEFJaffLvGbxe9WT9S1wob7BDWZJRrMIG7BgNVHSMEgbMwgbCAFJaffLvGbxe9WT9S1wob7BDWZJRroYGUpIGRMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbYIBADAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBQUAA4GBAIFfOlaagFrl71+jq6OKidbWFSE+Q4FqROvdgIONth+8kSK//Y/4ihuE4Ymvzn5ceE3S/iBSQQMjyvb+s2TWbQYDwcp129OPIbD9epdr4tJOUNiSojw7BHwYRiPh58S1xGlFgHFXwrEBb3dgNbMUa+u4qectsMAXpVHnD9wIyfmHMYIBmjCCAZYCAQEwgZQwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tAgEAMAkGBSsOAwIaBQCgXTAYBgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0xMzExMDMxMzQxMzFaMCMGCSqGSIb3DQEJBDEWBBRDJF8w+zsMr7FSk+pwinB5f5D4rzANBgkqhkiG9w0BAQEFAASBgHw1LMHpkpaqHIvDGdFE0eG+2mZlmMnUeDCBhQlbc7QMzFQYKTV94NfaebBO4PmNdADe1rq4WidSRZZbE7CzkX9IGENYnBTWY0hb2l0lGdGrJdGeWyV3ekg9WVaFMMumrekds96h3Cx7dGz2kWDzIai2iEXE/qoE+xpkyXAYZNV3-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=countingBook&page=Combining'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - The Multiplication Principle" data-toggle="tooltip">
+    <a href="Multiplication.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Combinatorics - Four Basic Problem Types' data-toggle="tooltip" >              
+    <a href="FourMainProblemTypes.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="coordinating-fundamentals-of-counting-problems">
+<h1>Coordinating Fundamentals of Counting Problems<a class="headerlink" href="#coordinating-fundamentals-of-counting-problems" title="Permalink to this heading">¶</a></h1>
+<p>We can solve a large number of counting problems by combining what we know
+about permutations, combinations, multiplication, and addition/subtraction.
+Let’s review how we typically use these four things.</p>
+
+<div class="runestone  ">
+<ul data-component="dragndrop" data-question_label="1" id="mixnmatch"  style="visibility: hidden;">
+    <span data-subcomponent="question">Q-1: Drag the description to the terms used to describe them.</span>
+	<span data-subcomponent=feedback>Not quite</span>
+
+    <li data-subcomponent="draggable" id="mixnmatch_drag1">Number of ways to order m of n distinct objects</li>
+    <li data-subcomponent="dropzone" for="mixnmatch_drag1">P(n,m)</li>
+
+    <li data-subcomponent="draggable" id="mixnmatch_drag2">Operator for multi-step processes</li>
+    <li data-subcomponent="dropzone" for="mixnmatch_drag2">Multiplication</li>
+
+    <li data-subcomponent="draggable" id="mixnmatch_drag3">Number of ways to select m of n distinct objects</li>
+    <li data-subcomponent="dropzone" for="mixnmatch_drag3">C(n,m)</li>
+
+    <li data-subcomponent="draggable" id="mixnmatch_drag4">Operator for multi-case processes</li>
+    <li data-subcomponent="dropzone" for="mixnmatch_drag4">Addition/Subtraction</li>
+</ul></div><p>For this essay, we have included some functions to help you coordinate multiple
+types of common counting objects in a single problem.</p>
+<section id="new-functions-for-counting">
+<h2>New Functions for Counting<a class="headerlink" href="#new-functions-for-counting" title="Permalink to this heading">¶</a></h2>
+<p>When coordinating fundamentals of counting problems, permutations of characters
+and combinations of characters become important building blocks. To make the process
+of writing a computer program to solve a counting problem easier, we introduce
+three new functions.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">Prod(Characters,</span> <span class="pre">Number)</span></code> takes two inputs and returns arrangements where
+repetition is allowed. The input <code class="docutils literal notranslate"><span class="pre">Characters</span></code> are the objects that are to be arranged,
+and <code class="docutils literal notranslate"><span class="pre">Number</span></code> is the number of objects we are arranging. For example, if
+<code class="docutils literal notranslate"><span class="pre">Characters</span> <span class="pre">=</span> <span class="pre">[1,2]</span></code> and <code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">=</span> <span class="pre">2</span></code>, then this would return the outcomes
+<code class="docutils literal notranslate"><span class="pre">(1,1),</span> <span class="pre">(1,2),</span> <span class="pre">(2,1),</span> <span class="pre">(2,2)</span></code>.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">Perms(Characters,</span> <span class="pre">Number)</span></code> takes two inputs and returns permutations.
+The two inputs are <code class="docutils literal notranslate"><span class="pre">Characters</span></code>, which is a list of the objects being permuted, and
+<code class="docutils literal notranslate"><span class="pre">Number</span></code>, which is the number of these objects we want to permute. For example, if
+<code class="docutils literal notranslate"><span class="pre">Characters</span> <span class="pre">=</span> <span class="pre">[1,2]</span></code> and <code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">=</span> <span class="pre">2</span></code>, then this would return the outcomes <code class="docutils literal notranslate"><span class="pre">(1,2),</span> <span class="pre">(2,1)</span></code>.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">Combs(Characters,</span> <span class="pre">Number)</span></code> takes two inputs and returns combinations.
+The two inputs are <code class="docutils literal notranslate"><span class="pre">Characters</span></code>, which is a list of the objects used to make combinations,
+and <code class="docutils literal notranslate"><span class="pre">Number</span></code>, which is the number of objects in each combination. For example, if
+<code class="docutils literal notranslate"><span class="pre">Characters</span> <span class="pre">=</span> <span class="pre">[1,2]</span></code> and <code class="docutils literal notranslate"><span class="pre">Number</span> <span class="pre">=</span> <span class="pre">2</span></code>, then this would return the outcome <code class="docutils literal notranslate"><span class="pre">(1,2)</span></code>.</p>
+<p>Run the following three blocks of code, and predict what each will do.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Coordinating0 data-question_label="2">
+<div id=Coordinating0_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Coordinating0_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+Letters = 'ABCDE'
+
+Product = Prod(Letters, 3)
+Show(Product,125)
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Coordinating1 data-question_label="3">
+<div id=Coordinating1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Coordinating1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+Letters = 'ABCDE'
+
+Permutations = Perms(Letters,3)
+Show(Permutations,60)
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Coordinating2 data-question_label="4">
+<div id=Coordinating2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Coordinating2_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+Letters = 'ABCDE'
+
+Combinations = Combs(Letters,3)
+Show(Combinations,10)
+</textarea>
+</div>
+</div>
+<p>Because the counting problems we will be solving in this essay have large numerical
+answers, we will not print every outcome. Instead, we have included the function
+<code class="docutils literal notranslate"><span class="pre">Show(Problem,</span> <span class="pre">number)</span></code>. This function takes in <code class="docutils literal notranslate"><span class="pre">Problem</span></code>, which is a generator
+that generates all the outcomes of the counting problem (more on this later). It also
+takes in <code class="docutils literal notranslate"><span class="pre">number</span></code>, which is the number of outcomes that will be printed off.</p>
+<section id="example-problem">
+<h3>Example Problem<a class="headerlink" href="#example-problem" title="Permalink to this heading">¶</a></h3>
+<p>You are buying coffee and doughnuts for your friends. The deli you go to has 5 different
+types of doughnuts and 4 different types of coffee. How many ways are there to choose
+2 types of doughnuts and 2 types of coffee to buy? (You do not need to account
+for the number of each type you are buying.)</p>
+<p>Examine the code below, and determine if it solves the problem.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=CoffeeDoughnuts data-question_label="5">
+<div id=CoffeeDoughnuts_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="CoffeeDoughnuts_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def CoffeeDoughnuts(): # A generator for the outcomes
+    Doughnuts = [1,2,3,4,5]
+    Coffee = [1,2,3,4]
+
+    for i in Combs(Doughnuts, 2):
+        for j in Combs(Coffee, 2):
+            yield (i,j)
+
+Show(CoffeeDoughnuts(), 10)
+Count(CoffeeDoughnuts)
+</textarea>
+</div>
+</div>
+<p>In the above example, we have defined a generator <code class="docutils literal notranslate"><span class="pre">CoffeeDoughnuts()</span></code> that creates
+all outcomes of the problem. The function <code class="docutils literal notranslate"><span class="pre">Count(Generator)</span></code> takes in a generator
+and counts everything it generates.</p>
+<p>A note on generators–We will create and use generators in this essay because the problems
+we are counting are large. Generators will create the outcomes one at a time, and won’t store
+them in memory. If a counting problem has 10 million outcomes, this means that
+we won’t need to store 10 million outcomes in memory. To create a generator, you
+can mimic the example above. You start by defining the name of your generator, like
+<code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">CoffeeDoughnuts():</span></code> and inside that definition you write the process to create
+the outcomes. Rather than printing the outcome, you will use the word <code class="docutils literal notranslate"><span class="pre">yield</span></code>. To count the
+number of outcomes, you use the function <code class="docutils literal notranslate"><span class="pre">Count(Generator)</span></code>, where <code class="docutils literal notranslate"><span class="pre">Generator</span></code> is the
+name of your generator. Syntax is important with the <code class="docutils literal notranslate"><span class="pre">Count</span></code> function. A statement like
+<code class="docutils literal notranslate"><span class="pre">Count(Generator())</span></code> will return an error. If you include parameters in the
+definition of your generator, then you can add the parameters after the name of
+the generator. For example, if we changed the definition of CoffeeDoughnuts so that
+we inputed the number of coffee and donuts (e.g. <code class="docutils literal notranslate"><span class="pre">CoffeeDoughnuts(4,5)</span></code>), we
+would write <code class="docutils literal notranslate"><span class="pre">Count(CoffeeDoughnuts,</span> <span class="pre">4,</span> <span class="pre">5)</span></code>.</p>
+</section>
+<section id="generator-practice-books">
+<h3>Generator Practice: Books<a class="headerlink" href="#generator-practice-books" title="Permalink to this heading">¶</a></h3>
+<p>In this problem, we will practice writing a generator to solve a simple problem.
+Suppose you have 10 books. How many ways are there for you to arrange three of them on
+a shelf. Write a generator that will produce these outcomes. Then, use the <code class="docutils literal notranslate"><span class="pre">Show</span></code>
+function to print the first 10 outcomes, and use the <code class="docutils literal notranslate"><span class="pre">Count</span></code> function to count
+the total number of outcomes.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Books1 data-question_label="6">
+<div id=Books1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Books1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Include your code here
+</textarea>
+</div>
+</div>
+</section>
+<section id="generator-practice-license-plates">
+<h3>Generator Practice: License Plates<a class="headerlink" href="#generator-practice-license-plates" title="Permalink to this heading">¶</a></h3>
+<p>In this problem, we will practice using the <code class="docutils literal notranslate"><span class="pre">Perms</span></code> function in a generator. Suppose
+a license plate consists of three letters (from the English alphabet) followed by
+three digits (from 0 to 9). How many license plates are there with no repeated letters,
+and where the numbers are in increasing order? Write a generator to create the outcomes, then use the <code class="docutils literal notranslate"><span class="pre">Show</span></code>
+function two print the first 20 outcomes, and use the <code class="docutils literal notranslate"><span class="pre">Count</span></code> function to determine
+the total number of outcomes.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=License-Plate data-question_label="7">
+<div id=License-Plate_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="License-Plate_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# I plan on erasing this code before this goes live
+
+def LicensePlates():
+
+    Letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    Numbers = '0123456789'
+
+    for i in Perms(Letters,3):
+        for j in Combs(Numbers,3):
+            yield (i,j)
+
+Show(LicensePlates(),20)
+Count(LicensePlates)
+</textarea>
+</div>
+</div>
+</section>
+</section>
+<section id="example-problem-0">
+<h2>Example Problem 0:<a class="headerlink" href="#example-problem-0" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>Suppose you have eight friends. If you have three unique hats and three identical
+t-shirts, how many ways can you distribute the hats and t-shirts to your friends
+if nobody can get multiple t-shirts or hats, but they can get both a t-shirt
+and a hat?</p>
+</div></blockquote>
+<p>We can think about a solution where we first distribute the hats to our friends,
+and then we distribute the t-shirts to our friends. There are <span class="math notranslate nohighlight">\(P(8,3)\)</span> ways
+to distribute the hats, and there are <span class="math notranslate nohighlight">\(C(8,3)\)</span> ways to distribute the t-shirts.
+Hence, there are <span class="math notranslate nohighlight">\(P(8,3)\times C(8,3)\)</span> ways to distribute the hats and
+t-shirts.</p>
+<p>Write some code that will generate these outcomes.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=HatsShirts0 data-question_label="8">
+<div id=HatsShirts0_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="HatsShirts0_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# I would remove this code before this goes live
+def HatsShirts():
+    Friends = [1,2,3,4,5,6,7,8]
+
+    for i in Perms(Friends,3):
+        for j in Combs(Friends, 3):
+            yield (i,j)
+
+Show(HatsShirts(),10)
+Count(HatsShirts)
+</textarea>
+</div>
+</div>
+</section>
+<section id="example-problem-1">
+<h2>Example Problem 1:<a class="headerlink" href="#example-problem-1" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>Suppose you have eight friends. If you have three unique hats, and three identical
+t-shirts, how many ways can you distribute the hats and t-shirts to your friends
+if nobody receives both a hat and a t-shirt?</p>
+</div></blockquote>
+<p>We can think about a solution where we first distribute the hats to our friends,
+and then we distribute the t-shirts to those friends who didn’t receive a hat. There
+are <span class="math notranslate nohighlight">\(P(8,3)\)</span> ways to distribute the hats to our friends, because the hats
+are distinct. When we select friends that will receive the t-shirts, we must remove
+those friends that received the hats from consideration.
+No matter which friends we give the hats to, there will be five friends
+who don’t receive one. Hence, there are <span class="math notranslate nohighlight">\(C(5,3)\)</span> ways to distribute the t-shirts
+to our friends <strong>for each way</strong> to distribute the hats. Therefore, the total number
+of ways to distribute the hats and t-shirts is <span class="math notranslate nohighlight">\(P(8,3)\times C(5,3) = 3360\)</span>.</p>
+<p>We can code these possibilities too. Examine the code below, predict what line
+5 accomplishes in relation to the above counting process.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=HatsShirts data-question_label="9">
+<div id=HatsShirts_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="HatsShirts_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def HatsShirts():
+    Friends = [1,2,3,4,5,6,7,8]
+
+    for Get_Hats in Perms(Friends, 3):            # Ways to distribute the hats
+        Unchosen = Remove(Friends, Get_Hats)      # Create set of friends who didn't receive a hat
+        for Get_Tshirts in Combs(Unchosen,3):     # Ways to distribute the t-shirts
+            yield (Get_Hats, Get_Tshirts)         # This is a long list
+Show(HatsShirts(),10)
+Count(HatsShirts)
+</textarea>
+</div>
+</div>
+<section id="new-counting-function-remove">
+<h3>New Counting Function: Remove<a class="headerlink" href="#new-counting-function-remove" title="Permalink to this heading">¶</a></h3>
+<p>Many solutions to counting problems involve breaking a process into steps, such as
+first distributing hats and then distributing t-shirts. In some of these solutions,
+the choices in the first step are removed from the possible choices in later steps.
+We have created the function <code class="docutils literal notranslate"><span class="pre">Remove(BigList,</span> <span class="pre">SmallList)</span></code> which takes in two lists (or tuples),
+and returns the set difference of the lists. Specifically, <code class="docutils literal notranslate"><span class="pre">Remove(BigList,</span> <span class="pre">SmallList)</span></code>
+will return a list that contains everything in <code class="docutils literal notranslate"><span class="pre">BigList</span></code> that is not also in <code class="docutils literal notranslate"><span class="pre">SmallList</span></code>.
+Run the following code to see an example.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Remove data-question_label="10">
+<div id=Remove_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Remove_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+A = [1,2,3,4,5,6,7,8,9,10]
+B = [2,5,7,8]
+
+print(Remove(A,B))
+</textarea>
+</div>
+</div>
+</section>
+</section>
+<section id="example-problem-2">
+<h2>Example Problem 2:<a class="headerlink" href="#example-problem-2" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>In how many ways can we create a 3-letter password from the letters A, B, C, D, and E if
+the password must contain at least one E?</p>
+</div></blockquote>
+<p>Examine the solutions below. Which one(s) is/are correct?</p>
+<section id="solution-1">
+<h3>Solution 1:<a class="headerlink" href="#solution-1" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Since the password must contain at least one E, we can start by choosing if the first,
+second, or third character must be an E. There are three ways to make this choice.
+By selecting which character must be an E, then our password will contain an E
+no matter the choices we make for the other characters. Hence, there are 5 possible choices
+for each of the two remaining positions. Therefore, there are <span class="math notranslate nohighlight">\(3\times 5^2\)</span> ways
+to create these passwords.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=EPasswords1 data-question_label="11">
+<div id=EPasswords1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="EPasswords1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# I really need to go back and make this code easier to parse
+def E_Passwords():
+    positions = [0,1,2]
+    Letters = ['A', 'B', 'C', 'D', 'E']
+
+    for i in positions:
+        for j in Letters:
+            for k in Letters:
+                password = ['','','']
+                other_positions = Remove(positions,[i])
+                password[i] = 'E'
+                password[other_positions[0]] = j
+                password[other_positions[1]] = k
+                yield(password)
+Show(E_Passwords(),10)
+Count(E_Passwords)
+</textarea>
+</div>
+</div>
+</div></blockquote>
+</section>
+<section id="solution-2">
+<h3>Solution 2:<a class="headerlink" href="#solution-2" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Since the passwords contain at least one E, we can break the outcomes into cases
+that depend on the number of Es. If the password contains exactly one E, then there
+are 3 ways to choose the position of the E, and for every position of the E there
+are <span class="math notranslate nohighlight">\(4^2\)</span> ways to choose the remaining letters. Hence, there are <span class="math notranslate nohighlight">\(3\times 4^2\)</span>
+ways to choose passwords that contain exactly one E. Similarly, for passwords that contain
+two Es there are 3 ways to choose which positions contain an E, and there are 4 ways to choose
+the remaining letter. Thus, there are <span class="math notranslate nohighlight">\(3\times 4\)</span> ways to create a password with
+exactly two Es. Finally, there is only one way to create a password that contains
+exactly three Es. Therefore, there are <span class="math notranslate nohighlight">\(3\times 4^2 + 3\times 4 + 1\)</span> ways to create the
+passwords.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=EPasswords2 data-question_label="12">
+<div id=EPasswords2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="EPasswords2_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# wow this code is a mess, and I plan on cleaning it up
+def E_Passwords():
+    positions = [0,1,2]
+    Letters_No_E = ['A', 'B', 'C', 'D']
+
+    for i in [1,2,3]:
+        for j in Combs(positions, i):
+            for k in Prod(Letters_No_E, 3-i):
+                password = ['','','']
+                Non_E_Positions = Remove(positions, j)
+                for E_place in j:
+                    password[E_place] = 'E'
+                for x in range(len(Non_E_Positions)):
+                    password[Non_E_Positions[x]] = k[x]
+                yield(password)
+Show(E_Passwords(),10)
+Count(E_Passwords)
+</textarea>
+</div>
+</div>
+</div></blockquote>
+</section>
+<section id="solution-3">
+<h3>Solution 3:<a class="headerlink" href="#solution-3" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>To find all the passwords with at least one E, we count all the passwords that
+may or may not have an E, and then subtract the number of passwords that don’t
+contain an E. There are <span class="math notranslate nohighlight">\(5^3\)</span> ways to create a password without a restriction
+on the number of Es. There are <span class="math notranslate nohighlight">\(4^3\)</span> ways to create a password without an E. Hence,
+there are <span class="math notranslate nohighlight">\(5^3 - 4^3\)</span> total passwords that contain at least one E.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=EPasswords data-question_label="13">
+<div id=EPasswords_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="EPasswords_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# I need to clean up this code too
+Letters = ['A', 'B', 'C', 'D', 'E']
+Letters_No_E = ['A', 'B', 'C', 'D']
+
+All_Passwords = []
+for i in Prod(Letters,3):
+    All_Passwords.append(i)
+
+No_E_Passwords = []
+for j in Prod(Letters_No_E,3):
+    No_E_Passwords.append(j)
+
+E_Passwords = Remove(All_Passwords, No_E_Passwords)
+
+print(len(E_Passwords))
+</textarea>
+</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="example-problem-3">
+<h2>Example Problem 3:<a class="headerlink" href="#example-problem-3" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>(Adapted from <strong>Introduction to Combinatorics</strong> by Wallis and George, 2011) A popular
+portable gaming console comes in six different colors. In how many ways can we buy three
+consoles, if any consoles of the same color are considered the same?</p>
+</div></blockquote>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="14" data-multipleanswers="false"  id="Video-James"  style="visibility: hidden;">
+    <p>Q-14: Read the solutions below. Which solution(s) is/are correct?</p>
+
+    <li data-component="answer"  id="Video-James_opt_a">Solution 1</li><li data-component="feedback">Incorrect</li>
+    
+    <li data-component="answer" data-correct='yes' id="Video-James_opt_b">Solution 2</li><li data-component="feedback">Correct</li>
+    
+    <li data-component="answer"  id="Video-James_opt_c">Both are correct</li><li data-component="feedback">Incorrect</li>
+    
+
+    </ul>
+    </div>
+    <dl class="simple">
+<dt>Solution 1:</dt><dd><p>We can solve this by pretending different arrangements of the consoles are distinct,
+and then dividing by the number of ways to arrange the consoles. If the consoles
+were distinct, then there would be <span class="math notranslate nohighlight">\(6^3\)</span> ways to create an arrangement (six
+colors for each console). However, for any three consoles there are <span class="math notranslate nohighlight">\(3!\)</span> to arrange
+them. Thus, the expression <span class="math notranslate nohighlight">\(6^3\)</span> counts each choice exactly <span class="math notranslate nohighlight">\(3!\)</span> times,
+so we can divide by this number to make sure we only count each choice once.
+Therefore, there are <span class="math notranslate nohighlight">\(\frac{6^3}{3!}\)</span> ways to select three consoles.</p>
+</dd>
+</dl>
+<p>[Do we want to use a different incorrect solution? I’m not sure the students
+will have thought deeply about the division principle, and I don’t want their first
+example of it be an inappropriate usage]</p>
+<dl class="simple">
+<dt>Solution 2:</dt><dd><p>We can solve this by breaking the outcomes into the number of colors we buy. If we
+buy three consoles of the same color, there are only 6 ways to choose that color.
+If we buy two consoles of the same color, and one of a different color, then there
+are 6 ways to select the color for the pair and 5 ways to select the color of the
+other console, for a total of <span class="math notranslate nohighlight">\(6\times 5\)</span> ways. If we have three consoles all
+of different color, then there are <span class="math notranslate nohighlight">\({6\choose 3}\)</span> ways to select the colors. Thus,
+there are a total of <span class="math notranslate nohighlight">\(6 + 6\times 5 + {6\choose 3}\)</span> ways to select consoles.</p>
+</dd>
+</dl>
+<p>[Insert discussion of these solutions, and the ways the outcomes are encoded]</p>
+<p>[Insert computer programs]</p>
+</section>
+<section id="encoding-outcomes">
+<h2>Encoding Outcomes<a class="headerlink" href="#encoding-outcomes" title="Permalink to this heading">¶</a></h2>
+<p>A helpful first step when solving counting problems is to determine how the outcomes to be
+counted might be encoded. What we mean by this is essentially how might we
+write an outcome on a piece of paper. What will they look like? What are some
+possible outcomes? What are some things that are not outcomes?</p>
+<p>Consider this example.</p>
+<section id="encoding-practice-books">
+<h3>Encoding Practice: Books<a class="headerlink" href="#encoding-practice-books" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Suppose I have 5 books, and I am thinking about bringing
+some of these books with me on vacation. How many ways are there to take some, or none,
+of my books with me?</p>
+<p>One way to encode these outcomes is to label my books as the numbers <span class="math notranslate nohighlight">\(\{ 1,2,3,4,5\}\)</span>,
+and then take any subset (including the empty subset and the whole set) as the
+outcomes. This way, the outcome <span class="math notranslate nohighlight">\(\{ 2, 4\}\)</span> represents taking books 2 and 4,
+and the outcome <span class="math notranslate nohighlight">\(\{ 3, 4, 5\}\)</span> represents taking books 3, 4, and 5. If I wanted
+to count the total number of outcomes, I could break the outcomes into cases that
+depend on the number of books being taken, and then count each case separately. In
+this case, this expression would be
+<span class="math notranslate nohighlight">\({5\choose 0} + {5\choose 1} +{5\choose 2} +{5\choose 3} +{5\choose 4} +{5\choose 5} = 32\)</span>.
+The code below counts these outcomes.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=BooksEx1 data-question_label="15">
+<div id=BooksEx1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="BooksEx1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def Books():
+    books = [1,2,3,4,5]
+
+    for i in range(5+1): # Determine number of books taken
+        for j in Combs(books,i): # Which books are taken
+            yield(j)
+
+Show(Books(),20) # Print the first 20 outcomes
+Count(Books)
+</textarea>
+</div>
+</div>
+<p>This is a perfectly reasonable way to count all the way to bring books on vacation,
+but calculating the total number of ways by hand becomes progressively more
+difficult the more books we have. Consider another way of encoding the outcomes.</p>
+<p>Another way of encoding an outcomes would be as a string of five 0s and 1s, such as
+01010. Here, each position represents a book, and a 0 represents leaving the book and
+a 1 represents taking the book with you. So, the outcome 01010 is the same as
+the outcome <span class="math notranslate nohighlight">\(\{ 2,4\}\)</span>, and the outcome 00111 is the same as the outcome
+<span class="math notranslate nohighlight">\(\{ 3,4,5\}\)</span>. This new method of encoding is a bit easier to count. We
+have five position, and each position can be occupied by one of two characters.
+Thus, there are <span class="math notranslate nohighlight">\(2^5 = 32\)</span> possible outcomes.</p>
+<p>The code below counts these outcomes.</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=BooksEx2 data-question_label="16">
+<div id=BooksEx2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="BooksEx2_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def Books():
+    NoYes = [0,1]
+
+    for i in NoYes:
+        for j in NoYes:
+            for k in NoYes:
+                for l in NoYes:
+                    for m in NoYes:
+                        yield(i,j,k,l,m)
+Show(Books(),20)
+Count(Books)
+</textarea>
+</div>
+</div>
+</div></blockquote>
+</section>
+<section id="encoding-outcomes-problems">
+<h3>Encoding Outcomes Problems<a class="headerlink" href="#encoding-outcomes-problems" title="Permalink to this heading">¶</a></h3>
+<section id="problem-1">
+<h4>Problem 1:<a class="headerlink" href="#problem-1" title="Permalink to this heading">¶</a></h4>
+<blockquote>
+<div><p>How many ways are there to arrange the letters in the word BANANA? Can you
+write a computer program to list these outcomes?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=BANANA data-question_label="17">
+<div id=BANANA_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="BANANA_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# I would remove this code before it goes live
+
+def Banana():
+    positions = [1,2,3,4,5,6]
+
+    for a_positions in Combs(positions, 3):
+        non_a_positions = Remove(positions, a_positions)
+        for n_positions in Combs(non_a_positions, 2):
+            non_n_positions = Remove(non_a_positions, n_positions)
+            for b_position in Combs(non_n_positions, 1):
+                yield (a_positions, n_positions, b_position)
+Show(Banana(), 10)
+Count(Banana)
+</textarea>
+</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="problem-2-coffee-run">
+<h3>Problem 2: Coffee Run<a class="headerlink" href="#problem-2-coffee-run" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Amy, Brady, and Carl are going to get some coffee. They invite their coworkers,
+Xander, Yan, and Zach to go with them. However, Xander, Yan, and Zach may decide
+not to get coffee, and they make this choice individually. If the coffee shop offers
+5 types of coffee, how many ways are there for people to get coffee?</p>
+<p>Consider the two solution methods below. Do both of them solve the problem?</p>
+<dl class="simple">
+<dt>Solution 1:</dt><dd><p>We can solve this problem in two stages: first, decide on which coffees Amy, Brady,
+and Carl receive, and second decide on who accompanies them and what coffees
+they get. Because these stages are independent, we can multiply the number of outcomes
+for each stage to get our final answer. Amy, Brady, and Carl can get coffees in
+<span class="math notranslate nohighlight">\(5^3\)</span> ways. For the second stage, we can break into cases based on how many
+people get coffee, and for each stage determine which coffees the people get.
+We can encode these outcomes as a tuple that determines which people get coffee,
+followed by a tuple that determines which coffees they receive. For example,
+<span class="math notranslate nohighlight">\((Xander, Zach)(2,3)\)</span> could represent Xander getting coffee option 2 and Zach
+getting coffee option 3, and Yan deciding not to get a coffee. We can order the
+first tuple by the first letter of their names so that we do not overcount outcomes.
+There is one way for no people to get coffee. If one person gets
+coffee, then there are <span class="math notranslate nohighlight">\({3\choose 1}\)</span> ways to choose the person, and 5 ways for
+this person to get a coffee (<span class="math notranslate nohighlight">\({3\choose 1}\times 5\)</span> total ways). If two people
+get coffee, there is <span class="math notranslate nohighlight">\({3\choose 2}\times 5^2\)</span> ways to determine the people
+getting the coffee and which coffees they get. Finally, if all three people go there
+are <span class="math notranslate nohighlight">\({3\choose 3}\times 5^3\)</span> ways to decide which people get coffee, and which coffee
+they get. Hence, there are
+<span class="math notranslate nohighlight">\(5^3\left( 1 + {3\choose 1}\times 5^1 + {3\choose 2}\times 5^2  + {3\choose 3}\times 5^3 \right)\)</span>
+ways to get coffee.</p>
+</dd>
+<dt>Solution 2:</dt><dd><p>Like before, our solution will have two stages. However, we will encode the second
+stage differently. In addition to the five coffee options, we can add the “no coffee” option,
+for a total of 6 options. For example, <span class="math notranslate nohighlight">\((2,0,3)\)</span> could represent Xander getting
+option 2, Yen not getting coffee, and Zach getting coffee 3. Hence, each person has 6 options
+in the second stage, and so there are <span class="math notranslate nohighlight">\(5^3\times 6^3\)</span> ways to get coffee.</p>
+</dd>
+</dl>
+<p>Examine the codes below. How might you take the outcomes produced in the first code and
+turn them into outcomes produced in the second code? What about vice-versa?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=CoffeeRun1 data-question_label="18">
+<div id=CoffeeRun1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="CoffeeRun1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def CoffeeRun():
+    CoffeeChoices = [1,2,3,4,5]
+    People = ['Xander', 'Yan', 'Zach']
+
+    for i in Prod(CoffeeChoices,3):
+        for num in [0,1,2,3]:
+            for j in Combs(People, num):
+                for k in Prod(CoffeeChoices, num):
+                    yield(i,j,k)
+
+Show(CoffeeRun(),20)
+Count(CoffeeRun)
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=CoffeeRun2 data-question_label="19">
+<div id=CoffeeRun2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="CoffeeRun2_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+def CoffeeRun():
+    CoffeeChoices = [1,2,3,4,5]
+    CoffeeChoicesAddZero = [0,1,2,3,4,5]
+
+    for i in Prod(CoffeeChoices,3):
+        for j in Prod(CoffeeChoicesAddZero,3):
+            yield(i,j)
+
+Show(CoffeeRun(),20)
+Count(CoffeeRun)
+</textarea>
+</div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="practice-problems">
+<h2>Practice Problems:<a class="headerlink" href="#practice-problems" title="Permalink to this heading">¶</a></h2>
+<p>Below are a number of practice problems. We have included space to write code if
+you wish to do so.</p>
+<dl>
+<dt>1:</dt><dd><p>You are hosting a barbeque, and six of your friends came. If you cooked two hamburgers,
+two hotdogs, and two veggie burgers, how many ways can you distribute these to your
+friends so that no friend receives more than one item?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P1 data-question_label="20">
+<div id=P1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+<dt>2:</dt><dd><p>You are hosting a barbeque, and six of your friends came. If you cooked two hamburgers,
+two hotdogs, and two veggie burgers, how many ways can you distribute these to your
+friends so that no friend receives more than one item, and your vegetarian friend
+gets a veggie burger?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P2 data-question_label="21">
+<div id=P2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P2_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+<dt>3:</dt><dd><p>In a standard deck of cards, the denominations are 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack,
+Queen, King, and Ace. You are playing poker, where your hand has five cards in it.
+You have a ‘pair’ if exactly two of your cards are the same denomination.
+How many ways are there to have a pair?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P3 data-question_label="22">
+<div id=P3_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P3_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+<dt>4:</dt><dd><p>In poker, a three of a kind is where your hand has exactly three cards of the
+same denomination, and no other pairs. How many ways are there to get a three
+of a kind?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P4 data-question_label="23">
+<div id=P4_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P4_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+<dt>5:</dt><dd><p>How many ways are there to arrange the letters in the word SLEEPING?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P5 data-question_label="24">
+<div id=P5_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P5_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+<dt>6:</dt><dd><p>How many ways are there to arrange the letters in the phrase TACO CAT IN SLEEPY STEEPLE?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P6 data-question_label="25">
+<div id=P6_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P6_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+<dt>7:</dt><dd><p>You are friends with three pairs of twins. How many ways are there to choose three friends
+to go to lunch with you, if you are unable to distinguish between twins?</p>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=P7 data-question_label="26">
+<div id=P7_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="P7_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Feel free to put code here
+</textarea>
+</div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="end-of-essay">
+<h2>End of Essay<a class="headerlink" href="#end-of-essay" title="Permalink to this heading">¶</a></h2>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Function-Creations data-question_label="27">
+<div id=Function-Creations_question class="ac_question col-md-12">
+<p>This area defines some functions that we are going to be using. No need to
+understand what is going on.</p>
+
+</div>
+<textarea data-lang="python" id="Function-Creations_editor" 
+      data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+
+import itertools
+
+def Perms(Objects, Nums):
+    return itertools.permutations(Objects, Nums)
+
+def Combs(Objects, Nums):
+    return itertools.combinations(Objects,Nums)
+
+def Prod(Objects, Nums):
+    return itertools.product(Objects, repeat=Nums)
+
+def Remove(A, B):
+    # Creates a list that is essentially A\B in set theory
+    return [i for i in A if i not in B]
+
+def isTrue(input):
+# Only used by the Show function
+    return True
+
+def Show(GenFun, val1, val2=0, List=False, Condition=isTrue):
+    Outcomes = []
+    for i in range(max(val1, val2)):
+        temp = list(next(GenFun))
+        if i>=min(val1, val2) and Condition(temp) is True:
+            Outcomes+=[temp]
+    if List is False:
+        for i in Outcomes:
+            print(i)
+    elif List is True:
+        return(Outcomes)
+
+def Count(GenFun,*N):
+    Object = GenFun(*N)
+    print('Size: ', sum(1 for _ in Object))
+</textarea>
+</div>
+</div>
+<p>Maybe include this problem:
+(Adapted from <strong>Introduction to Combinatorics</strong> by Wallis and George, 2011) A student
+wants to celebrate with two of her friends by going out to a restaurant. She has four
+friends total, and one of these friends is under the age of 21. Of the seven restaurants
+she could go to, only four of them permit people under the age of 21. In how many ways
+could she select two friends and go to a restaurant.</p>
+<blockquote>
+<div>
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="28" data-multipleanswers="false"  id="Restaurant"  style="visibility: hidden;">
+    <p>Q-28: Examine the codes below. Will they both solve the above problem by listing
+all the ways to bring two friends to a restaurant (even if the outcomes may
+look different or be in a different order)? Feel free to run the code.</p>
+
+    <li data-component="answer" data-correct='yes' id="Restaurant_opt_a">Yes</li><li data-component="feedback">Correct</li>
+    
+    <li data-component="answer"  id="Restaurant_opt_b">No</li><li data-component="feedback">Incorrect</li>
+    
+
+    </ul>
+    </div>
+    
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Restaurant1 data-question_label="29">
+<div id=Restaurant1_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Restaurant1_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# Friend 1 is underage
+# Under-age restaurants are 1,2,3,4
+
+def FriendsRestaurant():
+    Friends = [1,2,3,4]
+    Restaurants = [1,2,3,4,5,6,7]
+
+
+    for group in Combs(Friends,2):
+        for j in Restaurants:
+            if not (1 in group and j>4):
+                yield(group,j)
+Show(FriendsRestaurant(),10)
+Count(FriendsRestaurant)
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Restaurant_Test data-question_label="30">
+<div id=Restaurant_Test_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Restaurant_Test_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+# This needs a bit of work
+# Intended to show the subtraction principle as literally subtracting one
+#       list from another, rather than using an if statement. Is this
+#       worth it? For the addition principle, we generally are adding two
+#       cases that are adjacent, but for the subtraction principle we
+#       use an if statement. What better aligns with combinatorics?
+
+def AllCombs():
+    Friends = [1,2,3,4]
+    Restaurants = [1,2,3,4,5,6,7]
+
+    for group in Combs(Friends,2):
+        for Restaurant in Restaurants:
+            yield (group, Restaurant)
+def BadCombs():
+    Friends = [1,2,3,4]
+    Restaurants = [1,2,3,4,5,6,7]
+
+    for group in Combs(Friends,2):
+        for Restaurant in Restaurants:
+            if 1 in group and Restaurant > 4:
+                yield (group, Restaurant)
+GoodCombs = Remove(AllCombs(), BadCombs())
+for i in range(10):
+    print(GoodCombs[i])       #Show() and Count() only work with generators
+print(len(GoodCombs))
+</textarea>
+</div>
+</div>
+
+<div class="runestone explainer ac_section ">
+<div data-component="activecode" id=Restaurant2 data-question_label="31">
+<div id=Restaurant2_question class="ac_question col-md-12">
+
+</div>
+<textarea data-lang="python" id="Restaurant2_editor" 
+     data-include="Function-Creations" data-timelimit=25000 data-coach="true" data-codelens="true"   
+    data-audio=''      
+           data-wasm=/_static
+     style="visibility: hidden;">
+Friends = [1,2,3,4]
+Restaurants = [1,2,3,4,5,6,7]
+Older_Friends = [2,3,4]
+Under_Age_Restaurants = [1,2,3,4]
+
+
+# If underage friend goes
+for i in Older_Friends:
+    for j in Under_Age_Restaurants:
+        print('Friends 1 and ', i, 'Restaurant', j)
+
+
+# If underage friend does not go
+for j in Combs(Older_Friends,2):
+    for j in Restaurants:
+        print('Friends', i, 'Restaurant', j)
+</textarea>
+</div>
+</div>
+<p>Consider the two solutions below. Do you think both are right?</p>
+<dl class="simple">
+<dt>Jan’s Solution:</dt><dd><p>We can use the addition principle to solve this problem. Because friend 1 cannot
+go to certain restaurants, then we can split all the outcomes into whether or not
+friend is included. If friend 1 is included, there are 3 ways to select another
+friend. For each of these ways, there are 4 restaurants they could go to. Hence, there
+are <span class="math notranslate nohighlight">\(3\times 4\)</span> ways to bring along friend 1. If friend 1 isn’t included, then
+there are <span class="math notranslate nohighlight">\({3\choose 2}\)</span> ways to select two friends. For each of these ways,
+there are 7 restaurants they could go to. Hence, there are <span class="math notranslate nohighlight">\({3 \choose 2} \times 7\)</span>
+ways to go to a restaurant if friend 1 is not included. Therefore, there are
+<span class="math notranslate nohighlight">\(3\times 4 + {3\choose 2}\times 7\)</span> ways to go to a restaurant.</p>
+</dd>
+<dt>Jamie’s Solution:</dt><dd><p>We can use the subtraction principle for this problem. If we first count
+all the ways to bring two friends to the restaurant as if there were no restrictions,
+then we would only need to subtract the number of ways where friend 1 is brought
+to a restaurant that doesn’t serve minors. If there were no restrictions, then there
+would be <span class="math notranslate nohighlight">\({4\choose 2}\)</span> ways to pick two friends, and for each choice there would
+be 7 restaurants to go to. Hence, there would be <span class="math notranslate nohighlight">\({4\choose 2}\times 7\)</span> ways to
+go to a restaurant. However, of these ways, there are <span class="math notranslate nohighlight">\(3\)</span> ways to bring along friend 1,
+and for each of these options there are <span class="math notranslate nohighlight">\(3\)</span> ways to bring friend 1 to a restaurant
+that doesn’t serve minors. Thus, there are <span class="math notranslate nohighlight">\(3\times 3\)</span> ways to bring friend 1 to a
+restaurant that doesn’t serve minors. Therefore, there are <span class="math notranslate nohighlight">\({4\choose 2}\times 7 - 3\times 3\)</span>
+ways to go to a restaurant.</p>
+</dd>
+</dl>
+<p>[Insert a discussion about the way these outcomes are encoded]</p>
+</div></blockquote>
+</section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - The Multiplication Principle' data-toggle="tooltip">
+  <a href="Multiplication.html" aria-label="Previous - The Multiplication Principle">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - Combinatorics - Four Basic Problem Types' data-toggle="tooltip" >
+    <a href="FourMainProblemTypes.html" aria-label="Next - Combinatorics - Four Basic Problem Types">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 PCAS.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.3.11.
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

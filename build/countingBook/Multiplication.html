@@ -1,0 +1,957 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>The Multiplication Principle &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.8ac5fc15dd0c9c26.css?v=3287D97E" />
+
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.46feaa1582dad0f9.bundle.js?v=23EF70E9"></script>
+    <script src="_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="_static/runestone.e81005127a61c5fc.bundle.js?v=9BA4BB46"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Coordinating Fundamentals of Counting Problems" href="Combining.html" />
+    <link rel="prev" title="Addition and Subtraction Principles" href="AdditionSubtraction.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.3.11';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=countingBook&page=Multiplication'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - Addition and Subtraction Principles" data-toggle="tooltip">
+    <a href="AdditionSubtraction.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Coordinating Fundamentals of Counting Problems' data-toggle="tooltip" >              
+    <a href="Combining.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="the-multiplication-principle">
+<h1>The Multiplication Principle<a class="headerlink" href="#the-multiplication-principle" title="Permalink to this heading">¶</a></h1>
+<p>The Multiplication Principle (MP) is a foundational counting principle that helps
+us determine the number of outcomes of a multi-stage counting process. Generally,
+the idea is that a counting process can be broken into multiple stages, and, if
+certain conditions are met, then the number of outcomes of the total process is
+the product of the number of outcomes at each stage.</p>
+<p>As with the Addition and Subtraction principles, this is, on its face, a fairly
+intuitive idea. However, when we formalize it, there are some important ideas
+to consider. We prefer Tucker’s (2002) statement of the MP, provided below.
+In this worksheet, we will talk through the reasons for components of Tucker’s
+statement and provide practice with the MP.</p>
+<section id="multiplication-principle-mp">
+<h2>Multiplication Principle (MP)<a class="headerlink" href="#multiplication-principle-mp" title="Permalink to this heading">¶</a></h2>
+<blockquote>
+<div><p>Suppose a procedure can be broken into m successive (ordered) stages, with <span class="math notranslate nohighlight">\(r_1\)</span>
+different outcomes in the first stage, <span class="math notranslate nohighlight">\(r_2\)</span> different outcomes in the second stage, …, and
+<span class="math notranslate nohighlight">\(r_m\)</span> different outcomes in the mth stage. If the number of outcomes at each stage is independent
+of the choices in previous stages and if the composite outcomes are all distinct, then
+the total procedure has <span class="math notranslate nohighlight">\(r_1 \times r_2 \times ... \times r_m\)</span> different composite outcomes.</p>
+</div></blockquote>
+<p>This may sound abstract, and our goal is to present and discuss a sequence of problems
+that make the Multiplication Principle (MP) more clear. Consider first a problem about
+creating outfits from your wardrobe.</p>
+<section id="problem-1-outfits">
+<h3>Problem 1: Outfits<a class="headerlink" href="#problem-1-outfits" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>You have four different tops (a tee, a sweater, a tank, and a blouse) and three different bottoms
+(shorts, capris, and jeans). How many different outfits are you able to make?</p>
+</div></blockquote>
+<p>To solve this problem, we can think about picking an outfit to wear in two stages.
+First, we specify a top to wear (there are four to choose from), and then we specify
+a bottom to wear (there are three to choose from). You’ll notice that we aren’t
+restricting which tops and bottoms may go together, so we say that the choice of
+bottom is independent of the choice of top. Thus, for any of the four tops, we have
+three bottoms we can choose.</p>
+<p>Further, anytime we choose a top and a bottom, we will get a unique outfit. While this
+may seem obvious now, it’s important to emphasize and will be relevant when we solve
+more challenging problems.</p>
+<p>The reason for pointing out that our counting process can occur in two stages, that
+the number of choices in each stage is independent, and that the resulting (composite)
+outcomes are all distinct is so that we know we are in the exact situation that
+the MP describes. Now that we have done so, we know that there are <span class="math notranslate nohighlight">\(4\times 3 = 12\)</span>
+outcomes.</p>
+<p>To visualize these outcomes, consider the table below where we list every outcome:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p><strong>Shorts</strong></p></td>
+<td><p><strong>Capris</strong></p></td>
+<td><p><strong>Jeans</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Tee</strong></p></td>
+<td><p>(Tee, Shorts)</p></td>
+<td><p>(Tee, Capris)</p></td>
+<td><p>(Tee, Jeans)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sweater</strong></p></td>
+<td><p>(Sweater, Shorts)</p></td>
+<td><p>(Sweater, Capris)</p></td>
+<td><p>(Sweater, Jeans)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Tank</strong></p></td>
+<td><p>(Tank, Shorts)</p></td>
+<td><p>(Tank, Capris)</p></td>
+<td><p>(Tank, Jeans)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Blouse</strong></p></td>
+<td><p>(Blouse, Shorts)</p></td>
+<td><p>(Blouse, Capris)</p></td>
+<td><p>(Blouse, Jeans)</p></td>
+</tr>
+</tbody>
+</table>
+<p>This table neatly organizes the outcomes by using rows to distinguish between the tops,
+and columns to distinguish between the bottoms. You may notice that in any row
+all the tops are the same, and in any column all the bottoms are the same. We could have
+created this table one row at a time, where for every option of top we cycled through
+every option of bottom. Let’s carry out this counting process using computer code.</p>
+<p>Examine the code below. After you run it, compare the result to the table above and relate
+the result to the mathematical expression <span class="math notranslate nohighlight">\(4\times 3\)</span> .</p>
+</section>
+<section id="tops-and-bottoms">
+<h3>Tops and Bottoms<a class="headerlink" href="#tops-and-bottoms" title="Permalink to this heading">¶</a></h3>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 80)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMult1</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="n">tee</span><span class="p">,</span><span class="n">sweater</span><span class="p">,</span><span class="n">tank</span><span class="p">,</span><span class="n">blouse</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="n">shorts</span><span class="p">,</span><span class="n">capris</span><span class="p">,</span><span class="n">jeans</span>
+
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="problem-2-outfits-part-2">
+<h3>Problem 2: Outfits Part 2<a class="headerlink" href="#problem-2-outfits-part-2" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Suppose now you had 4 different tops, 5 different bottoms, and 3 different pairs
+of shoes. Solve the following Parson’s problem to create a program that will list
+all possible outfits. Then, solve the multiple choice questions to check your
+reasoning.</p>
+</div></blockquote>
+<p>The code below will list all possible outfits. Before you run it, predict how the printed
+outcomes will be organized. Then, jot down your prediction for the first 5 outcomes that
+will be printed.</p>
+</section>
+<section id="tops-bottoms-and-shoes">
+<h3>Tops, Bottoms, and Shoes<a class="headerlink" href="#tops-bottoms-and-shoes" title="Permalink to this heading">¶</a></h3>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="MP_Parson1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the lines below to create code to print all possible tops-bottoms-shoes
+outcomes you could make.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="1"         data-numbered="left"  style="visibility: hidden;">
+        
+Tops = ['tee', 'sweater','tank', 'blouse']
+Bottoms = ['shorts', 'capris', 'jeans']
+Shoes = ['sneakers', 'sandals', 'keds']
+---
+counter = 0
+---
+for i in Tops:
+---
+    for j in Bottoms:
+---
+        for k in Numbers:
+---
+            print(i,j,k)
+---
+print(counter)
+---
+        </pre>
+        </div>
+        </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2" data-multipleanswers="false"  id="MP_1"  style="visibility: hidden;">
+    <p>Q-2: How many top-bottom-shoes outfits do you think you will get if you run the
+program above?</p>
+
+    <li data-component="answer" data-correct='yes' id="MP_1_opt_a">36</li><li data-component="feedback">Correct</li>
+    
+    <li data-component="answer"  id="MP_1_opt_b">10</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="MP_1_opt_c">4^3</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="3" data-multipleanswers="false"  id="MP_2"  style="visibility: hidden;">
+    <p>Q-3: If you run the program above, how many outfits are there that include jeans?</p>
+
+    <li data-component="answer"  id="MP_2_opt_a">36</li><li data-component="feedback">Incorrect</li>
+    
+    <li data-component="answer"  id="MP_2_opt_b">12</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="MP_2_opt_c">9</li><li data-component="feedback">Correct.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="cartesian-product-problems">
+<h2>Cartesian Product Problems<a class="headerlink" href="#cartesian-product-problems" title="Permalink to this heading">¶</a></h2>
+<p>The two outfits problems you have solved are examples of Cartesian Product Problems.
+We are starting with two sets - a set <span class="math notranslate nohighlight">\(T\)</span> which denotes all Tops and a set
+<span class="math notranslate nohighlight">\(B\)</span> which denotes all Bottoms. From these sets, we can create a new set, which
+consists of all pairs of Tops and Bottoms, exactly as we did for the first problem.
+We call this new set the Cartesian product of <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, and we use the
+symbols <span class="math notranslate nohighlight">\(T\times B\)</span> to denote this set.</p>
+<p>More formally, if you start with any two sets, say sets <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>,
+the Cartesian product of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> is the set of all pairs <span class="math notranslate nohighlight">\((x,y)\)</span>
+where <span class="math notranslate nohighlight">\(x\)</span> comes from <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(y\)</span> comes from <span class="math notranslate nohighlight">\(Y\)</span>. We use the symbols
+<span class="math notranslate nohighlight">\(X\times Y\)</span> to denote the Cartesian product of sets <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>. We can also
+take the Cartesian product of more than two sets, and the resulting Cartesian product is
+all the ways to take an element from each set and pair them together. We have seen this as well, like
+when we found all outfits that consisted of a top, a bottom, and a pair of shoes. If <span class="math notranslate nohighlight">\(T\)</span> is the
+set of tops, <span class="math notranslate nohighlight">\(B\)</span> is the set of bottoms, and <span class="math notranslate nohighlight">\(S\)</span> is the set of shoes, then
+the set <span class="math notranslate nohighlight">\(T\times B\times S\)</span> is all the possible combinations of a top, a bottom, and a
+pair of shoes.</p>
+<p>In the realm of counting problems, we say a problem is a Cartesian Product Problem
+if the set of outcomes of that problem can be encoded as a Cartesian product. As we have described,
+both of the outfits problems you’ve solved are Cartesian Product Problems. A nice
+similarity among all Cartesian Product Problems is that they can be solved using
+the multiplication principle. If you can represent the outcomes of a counting problem
+as a Cartesian product of sets, then the total number of outcomes is the product
+of the size of each set. For example, when we counted the total number of outfits
+we could make from a set of tops (<span class="math notranslate nohighlight">\(T\)</span> with size <span class="math notranslate nohighlight">\(|T|\)</span>) a set of bottoms (<span class="math notranslate nohighlight">\(B\)</span>
+with size <span class="math notranslate nohighlight">\(|B|\)</span>) and a set of shoes (<span class="math notranslate nohighlight">\(S\)</span> with size <span class="math notranslate nohighlight">\(|S|\)</span>), we found
+that the total number of outfits was <span class="math notranslate nohighlight">\(|T|\times |B| \times |S|\)</span> (the total
+number of tops times the total number of bottoms times the total number of pairs of shoes).</p>
+<p>Let’s solve another Cartesian Product problem.</p>
+<section id="problem-3-coin-dice-letter">
+<h3>Problem 3: Coin, Dice, Letter<a class="headerlink" href="#problem-3-coin-dice-letter" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>How many ways are there to first flip a fair coin, then roll a 6-sided die, and
+then pick a letter from the alphabet?</p>
+</div></blockquote>
+
+<div class="runestone">
+<div data-component="shortanswer" data-question_label="4" class="journal" id=shortmult2  >
+<p>Q-4: First things first, explain why the Coin, Dice, Letter problem is a Cartesian
+Product problem. Then, describe how you will find the total number of outcomes.</p>
+
+</div>
+</div> <!-- end of runestone div -->
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5" data-multipleanswers="false"  id="MP_3"  style="visibility: hidden;">
+    <p>Q-5: Predict what you think the answer to this problem is.</p>
+
+    <li data-component="answer" data-correct='yes' id="MP_3_opt_a">2*6*26</li><li data-component="feedback">Correct.</li>
+    
+    <li data-component="answer"  id="MP_3_opt_b">2+6+26</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="MP_3_opt_c">2*6 + 2*26 + 6*26</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    <p>The code below generates the outcomes of the Coin, Dice, Letter problem. We will
+represent the ways to flip a coin as ‘H’ and ‘T’, the ways to roll a 6-sided dice
+as the numbers 1 through 6, and the ways to choose a letter from the alphabet as
+the numbers 1 through 26. Predict the first five outcomes of the code before you
+run it.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 213)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMult3</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="n">H</span><span class="p">,</span><span class="n">T</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span>
+  <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span>
+</pre></div>
+</div>
+</aside>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6" data-multipleanswers="false"  id="MP_4"  style="visibility: hidden;">
+    <p>Q-6: As you scroll through the output of the above code, you may notice that the outcomes
+are split into two groups–those that start with “T” and those that start with “H”.
+How many outcomes are there that start with “T”? (Use the analysis tool to answer this question!)</p>
+
+    <li data-component="answer"  id="MP_4_opt_a">2*6 = 12</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="MP_4_opt_b">6*26 = 156</li><li data-component="feedback">Correct.</li>
+    
+    <li data-component="answer"  id="MP_4_opt_c">2*6*26 = 312</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="here-is-a-bit-more-practice">
+<h3>Here is a bit more practice.<a class="headerlink" href="#here-is-a-bit-more-practice" title="Permalink to this heading">¶</a></h3>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7" data-multipleanswers="false"  id="MP_5"  style="visibility: hidden;">
+    <p>Q-7: A store carries 8 styles of pants. For each style, there are 10 different
+possible waist sizes, 6 pant lengths, and 4 color choices. How many
+types of pants does the store have? You can check your work by writing
+code in the cell below if you wish.</p>
+
+    <li data-component="answer" data-correct='yes' id="MP_5_opt_a">1840</li><li data-component="feedback">Correct</li>
+    
+    <li data-component="answer"  id="MP_5_opt_b">240</li><li data-component="feedback">Incorrect. This counts the number of types for each style.</li>
+    
+    <li data-component="answer"  id="MP_5_opt_c">480</li><li data-component="feedback">Incorrect. This does not account for the choices of color.</li>
+    
+
+    </ul>
+    </div>
+    <aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 249)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMult4</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">4</span>
+
+</pre></div>
+</div>
+</aside>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8" data-multipleanswers="false"  id="MP_6"  style="visibility: hidden;">
+    <p>Q-8: How many nonempty collections of letters can be formed from three As and five Bs?
+Hint: this problem is very similar to, but not exactly, a Cartesian Product problem.</p>
+
+    <li data-component="answer"  id="MP_6_opt_a">24</li><li data-component="feedback">Incorrect. Does your solution count both no As and no Bs?</li>
+    
+    <li data-component="answer" data-correct='yes' id="MP_6_opt_b">23</li><li data-component="feedback">Correct. Well done!</li>
+    
+    <li data-component="answer"  id="MP_6_opt_c">15</li><li data-component="feedback">Incorrect. Are you allowing for no As and at least one B?</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="cartesian-products-with-copies-of-the-same-set">
+<h2>Cartesian Products with copies of the same set<a class="headerlink" href="#cartesian-products-with-copies-of-the-same-set" title="Permalink to this heading">¶</a></h2>
+<p>So far, we have only looked at Cartesian Product Problems where each set of objects
+was distinct (for example, the set of Tops was distinct from the set of Bottoms).
+However, there are counting problems that make use of Cartesian products of the
+same set multiple times. Consider the following problem.</p>
+<section id="problem-4-coin-flip">
+<h3>Problem 4: Coin Flip<a class="headerlink" href="#problem-4-coin-flip" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>How many ways are there to flip a coin 4 times in a row?</p>
+</div></blockquote>
+<p>If we think of the outcomes of flipping a coin once as either <cite>H</cite> or <cite>T</cite>, then
+we can think about the outcome of flipping a coin four times as a string of four
+letters, where any letter is either an <cite>H</cite> or a <cite>T</cite>. For example, the outcome
+<cite>HHTH</cite> can represent flipping a head on the first, second, and fourth toss, and flipping
+a tail on the third toss. If we let the set of flipping a coin once be <span class="math notranslate nohighlight">\(F=\{H,T\}\)</span>,
+then the outcomes of flipping a coin four times in a row  can be represented as
+<span class="math notranslate nohighlight">\(F\times F\times F\times F\)</span>. Like before, the total number of outcomes
+of these problems is still the product of the size of each set. In the case of flipping
+a coin four times, there are <span class="math notranslate nohighlight">\(2\times 2\times 2\times 2 = 16\)</span> outcomes.</p>
+<p>We should talk about the independence of choices at each stage and the uniqueness
+of composite outcomes. We’ll use coin flips as an example. By saying that the
+choices at each stage are independent, we mean that no matter the previous coin flip
+the possible ways to flip the next coin are exactly the same. For example, if your
+first coin was flipped heads, then the second coin could still be heads or tails. When
+we say uniqueness of composite outcomes, we mean that each four letter combination
+of Hs and Ts represent a different outcome. For example, compare outcomes HHTH and
+HTHH. Even though each of these outcomes had three heads and one tails, the outcomes are unique
+because the tails were in different coin flips; in the first outcome, the tail occurred
+on the third coin flip whereas in the second outcome the tail occurred on the
+second coin flip. Because the orders of the Hs and Ts matter in the outcomes, then
+the composite outcomes are unique.</p>
+</section>
+<section id="problem-5-quiz-questions">
+<h3>Problem 5: Quiz Questions<a class="headerlink" href="#problem-5-quiz-questions" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>On a quiz, there are 6 True/False questions. How many ways can a student
+finish the quiz, if they put an answer for every question?</p>
+<p>For the above question, fill in the code below and use the analysistool to count the number of outcomes.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 307)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMult5</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">6</span>
+
+</pre></div>
+</div>
+</aside>
+</div></blockquote>
+<p>Here is another problem that will set us up well for more discussions about the MP.</p>
+</section>
+<section id="problem-6-3-digit-sequences">
+<h3>Problem 6: 3-Digit Sequences<a class="headerlink" href="#problem-6-3-digit-sequences" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>How many 3-digit sequences can we make using the letters {a, b, c, d, e, f}, if
+we can repeat letters in our sequence?</p>
+</div></blockquote>
+<p>For the 3-Digit Sequences problem, write some code that prints the possible outcomes.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 320)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMult6</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+
+</pre></div>
+</div>
+</aside>
+<p>Check your work by answering the following multiple choice problem and using the analysistool:</p>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9" data-multipleanswers="false"  id="MP_7"  style="visibility: hidden;">
+    <p>Q-9: How many 3-digit sequences can we make using the letters {a, b, c, d, e, f}, if
+we can repeat letters in our sequence?</p>
+
+    <li data-component="answer"  id="MP_7_opt_a">6+6+6 = 18</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="MP_7_opt_b">6*5*4 = 120</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="MP_7_opt_c">6*6*6 = 216</li><li data-component="feedback">Correct. Well done!</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+<section id="why-independence-matters">
+<h2>Why Independence Matters<a class="headerlink" href="#why-independence-matters" title="Permalink to this heading">¶</a></h2>
+<p>While we have discussed that the number of choices at each stage of the counting
+process is independent of each other in problems like the Outfits problem or the Head
+Tails problem, we have not given any examples of when the number of choices aren’t independent.
+We will give a cautionary example of a problem where the number of choices is not independent.
+With this in mind, one of the best ways to determine if the number of choices
+at each stage is independent is to focus on how you might write down each
+outcome, taking note if there are ways to reduce the number of options at later stages
+by selecting specific options in earlier stages.</p>
+<p>Consider the following problem:</p>
+<section id="problem-7-face-card-heart-card">
+<h3>Problem 7: Face Card, Heart Card<a class="headerlink" href="#problem-7-face-card-heart-card" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>How many ways are there to make a two-card hand, where the first card is a face
+card and the second card is a heart? You may assume that the order of the cards
+matters, but you must have two distinct cards (e.g. you cannot have two Jacks of Hearts).</p>
+</div></blockquote>
+<p>On the face of it (pun intended), this problem seems like a Cartesian Product problem.
+After all, there are are 12 face cards (3 per suit) and 13 hearts, so why isn’t the
+answer <span class="math notranslate nohighlight">\(12\times 13\)</span>? The problem is that the number of ways to pick a heart is
+not independent of the number of ways to pick a face card. For example, if we picked the
+king of spades as our face card, then there are 13 possible ways to pick a heart
+card; however, if we picked the king of <strong>hearts</strong> as our face card, then there
+are only 12 ways to pick a different heart card. Hence, this problem is not a Cartesian
+Product Problem.</p>
+<p>That is not to say that we cannot use the MP in our solution of the problem, only that
+the solution is not <span class="math notranslate nohighlight">\(12\times 13\)</span>. For this problem, we can break our solutions into
+two cases: in the first case, our face card is not a heart card, and in the second case our
+face card is a heart card. (Notice here that we are leveraging the Addition Principle!)
+In the first case, the number of choices at each stage is independent, because choosing
+a non-heart face card does not limit the number of heart cards to draw. Hence, there are 9
+non-heart face cards, and for each of these there are 13 possible heart cards to draw. So,
+there are <span class="math notranslate nohighlight">\(9\times 13 = 117\)</span> ways to fulfill our first case. In the second case,
+although each choice of a heart face-card limits the options for the second card (e.g.
+if our face card is the king of hearts, then the remaining cards to draw are the ace
+through queen of hearts), the <strong>number of options</strong> for drawing the second card remains
+the same. For any choice of heart face-card, there are 12 options for the second card.
+Hence, we can apply the MP to find that there are <span class="math notranslate nohighlight">\(3\times 12 = 36\)</span> ways to
+fulfill our second case. Because the two cases are distinct and the two cases demonstrate
+all ways to select a face card and a heart, then there are <span class="math notranslate nohighlight">\(9\times 13 + 3\times
+12 = 153\)</span> ways to select a face card and a heart card.</p>
+<p>The code below gives this, with a cell for each part. Use the analysistool to count the outcomes and verify it is correct.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 386)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMP8part01</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="n">SJ</span><span class="p">,</span><span class="n">SQ</span><span class="p">,</span><span class="n">SK</span><span class="p">,</span><span class="n">DJ</span><span class="p">,</span><span class="n">DQ</span><span class="p">,</span><span class="n">DK</span><span class="p">,</span><span class="n">CJ</span><span class="p">,</span><span class="n">CQ</span><span class="p">,</span><span class="n">CK</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="n">HA</span><span class="p">,</span><span class="n">H2</span><span class="p">,</span><span class="n">H3</span><span class="p">,</span><span class="n">H4</span><span class="p">,</span><span class="n">H5</span><span class="p">,</span><span class="n">H6</span><span class="p">,</span><span class="n">H7</span><span class="p">,</span><span class="n">H8</span><span class="p">,</span><span class="n">H9</span><span class="p">,</span><span class="n">H10</span><span class="p">,</span><span class="n">HJ</span><span class="p">,</span><span class="n">HQ</span><span class="p">,</span><span class="n">HK</span>
+
+</pre></div>
+</div>
+</aside>
+<p>Now, examine the code below where calculate the second part of the sum above.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 394)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMP8part02</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="n">HA</span><span class="p">,</span><span class="n">H2</span><span class="p">,</span><span class="n">H3</span><span class="p">,</span><span class="n">H4</span><span class="p">,</span><span class="n">H5</span><span class="p">,</span><span class="n">H6</span><span class="p">,</span><span class="n">H7</span><span class="p">,</span><span class="n">H8</span><span class="p">,</span><span class="n">H9</span><span class="p">,</span><span class="n">H10</span><span class="p">,</span><span class="n">HJ</span><span class="p">,</span><span class="n">HQ</span><span class="p">,</span><span class="n">HK</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="o">=</span><span class="n">spec3</span> <span class="n">minus</span> <span class="n">item1</span>
+  <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="o">~</span><span class="n">HJ</span><span class="p">,</span><span class="n">HQ</span><span class="p">,</span><span class="n">HK</span>
+</pre></div>
+</div>
+</aside>
+</section>
+</section>
+<section id="applying-the-mp-to-other-types-of-problems">
+<h2>Applying the MP to other types of problems<a class="headerlink" href="#applying-the-mp-to-other-types-of-problems" title="Permalink to this heading">¶</a></h2>
+<p>While Cartesian Product Problems are excellent examples of problems that can
+be solved using the MP, there are other types of problems that can be solved using
+the MP. This really comes down to a key distinction in how the MP is worded. Specifically,
+we can apply the MP when the <strong>number of choices at each stage</strong> is independent. This is not
+exactly the same as saying the <strong>choices at each stage</strong> is independent. The exact choices at
+each stage are allowed to change, as long as the number of choices does not. We will
+work through a few problems where the exact choices change at each stage, although
+the number of choices remains the same.</p>
+<p>Consider the following problem:</p>
+<section id="problem-8-small-lottery">
+<h3>Problem 8: Small lottery<a class="headerlink" href="#problem-8-small-lottery" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>You have placed slips of paper with the numbers 1 through 5 in a bag,
+with one sheet of paper per number. You are going to draw out three slips of
+paper, one at a time, without replacing the slips of paper each time. How many ways
+are there to draw three slips of paper from the bag, one at a time without replacement,
+in order to create a sequence of three numbers?</p>
+</div></blockquote>
+<p>We can think about a counting process for this problem as occurring in three three stages:
+choosing the first slip, choosing the second slip, and choosing the third slip. Let’s discuss
+each stage. For the first stage, there are 5 ways of choosing a slip because there are
+5 slips of paper in the hat. However, the options for the second stage depend on what you
+drew in the first stage. For example, if you chose number 1 in the first stage, then
+the options for the second stage are the numbers 2 through 5. However, no matter the
+choice in the first stage, you have only removed one of the slips of paper so there
+must be four choice in the second stage. We can therefore apply the MP because the number
+of choices at the second stage is always four, even if the exact choices may be different. Similarly,
+for any choice in the first and second stage, you have only removed two of the slips, so there
+are three choices for the third stage. Therefore, there are <span class="math notranslate nohighlight">\(5\times 4\times 3\)</span> ways
+to draw the slips of paper from the hat.</p>
+<p>Here is one way to list all such outcomes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">123</span>
+<span class="mi">124</span>
+<span class="mi">125</span>
+<span class="mi">132</span>
+<span class="mi">134</span>
+<span class="mi">135</span>
+<span class="mi">142</span>
+<span class="mi">143</span>
+<span class="mi">145</span>
+<span class="mi">152</span>
+<span class="mi">153</span>
+<span class="mi">154</span>
+<span class="mi">213</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="mi">541</span>
+<span class="mi">542</span>
+<span class="mi">543</span>
+</pre></div>
+</div>
+<p>The above list is truncated so that it doesn’t take too much space on the page.
+Fill out the code below so that the above outcomes are the output of the program.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 463)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMP805</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="problem-9-how-to-appoint-roles-among-your-friends">
+<h3>Problem 9: How to appoint roles among your friends<a class="headerlink" href="#problem-9-how-to-appoint-roles-among-your-friends" title="Permalink to this heading">¶</a></h3>
+<blockquote>
+<div><p>Suppose that you are hanging out with your friends Rocket, Groot, Gamora, Drax,
+and Peter. From those five friends, you want to appoint a Captain and a President.
+How many ways are there to do this?</p>
+</div></blockquote>
+<p>Let’s consider the case where you choose Rocket as your Captain. In this case, the people
+you can choose for President are Groot, Gamora, Drax, and Peter. However, if you choose Drax
+as your best friend, then the people you can choose as President are Groot, Gamora, Rocket,
+and Peter. Clearly, the people you can pick for President depend on who you choose to
+be your Captain. However, the number of people for President is independent of who you choose to be
+your Captain: for every possible Captain, there are four possible people you can
+choose for President. Thus, we can still apply the MP to solve this problem, finding that there are
+<span class="math notranslate nohighlight">\(5\times 4 = 20\)</span> ways to choose a best friend and a person to ostracize.</p>
+<p>The code below solves provides this problem. Note that the “minus item1” ensures that we
+will not pick the same person as President who is already Captain.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Multiplication.rst</span>, line 485)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSampleMP9</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="n">Rocket</span><span class="p">,</span><span class="n">Groot</span><span class="p">,</span><span class="n">Gamora</span><span class="p">,</span><span class="n">Drax</span><span class="p">,</span><span class="n">Peter</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="o">=</span><span class="n">col1</span> <span class="n">minus</span> <span class="n">item1</span>
+</pre></div>
+</div>
+</aside>
+</section>
+</section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - Addition and Subtraction Principles' data-toggle="tooltip">
+  <a href="AdditionSubtraction.html" aria-label="Previous - Addition and Subtraction Principles">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - Coordinating Fundamentals of Counting Problems' data-toggle="tooltip" >
+    <a href="Combining.html" aria-label="Next - Coordinating Fundamentals of Counting Problems">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 PCAS.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.3.11.
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,873 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Type 1 - Arrangement with Repetition &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.8ac5fc15dd0c9c26.css?v=3287D97E" />
+
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.46feaa1582dad0f9.bundle.js?v=23EF70E9"></script>
+    <script src="_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="_static/runestone.e81005127a61c5fc.bundle.js?v=9BA4BB46"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Type 2 - Arrangement without Repetition - Permutations" href="Type2.html" />
+    <link rel="prev" title="Combinatorics - Four Basic Problem Types" href="FourMainProblemTypes.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.3.11';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=countingBook&page=Type1'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - Combinatorics - Four Basic Problem Types" data-toggle="tooltip">
+    <a href="FourMainProblemTypes.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Type 2 - Arrangement without Repetition - Permutations' data-toggle="tooltip" >              
+    <a href="Type2.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="type-1-arrangement-with-repetition">
+<h1>Type 1 - Arrangement with Repetition<a class="headerlink" href="#type-1-arrangement-with-repetition" title="Permalink to this heading">¶</a></h1>
+<p>In this section, we present some tasks involving arrangement with repetition
+problems. In our 2x2 grid, this is the cell in which unrestricted repetition
+is allowed, and we are counting ordered outcomes (or arrangements). In problems
+like these, we can employ multi-stage processes, where we have the same number
+of options at each stage because repetition is allowed.</p>
+<p>For instance, consider the following problem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="s2">&quot;How many length 5 binary strings are there?&quot;</span>
+</pre></div>
+</div>
+<p>Here, we have five positions, and we can employ a five-stage process where we
+consider the number of options at each position. Since there are 2 options
+(0 or 1) at each position no matter the choice of any previous position, we
+use the multiplication principle to yield <span class="math notranslate nohighlight">\(2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 2^5 = 32\)</span> total
+outcomes.</p>
+<p>Below is some code that generates all of the outcomes. Notice the nature of the
+outcomes themselves - repetition is allowed (something like 0 0 0 0 0 is a valid
+outcome), and we are counting ordered outcomes (outcomes like 1 0 0 0 0 and 0 0 0 0 1 are
+listed as distinct outcomes).</p>
+<section id="active-code-1">
+<h2>Active Code 1<a class="headerlink" href="#active-code-1" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type1.rst</span>, line 32)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Type_1_CodeSample1</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">5</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+  <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+  <span class="p">:</span><span class="n">col4</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+  <span class="p">:</span><span class="n">col5</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span>
+
+</pre></div>
+</div>
+</aside>
+<p>Now, answer the following questions about these outcomes You can use this analysis tool to answer them.</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type1.rst</span>, line 43)</p>
+<p>Unknown directive type “analysistool”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">analysistool</span><span class="p">::</span> <span class="n">type1Analysis</span>
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="quick-check-1-1">
+<h2>Quick Check 1.1<a class="headerlink" href="#quick-check-1-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="1" data-multipleanswers="false"  id="QC1_1"  style="visibility: hidden;">
+    <p>Q-1: How many outcomes start with 01?</p>
+
+    <li data-component="answer"  id="QC1_1_opt_a">16 outcomes start with 01</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_1_opt_b">4 outcomes start with 01</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_1_opt_c">8 outcomes start with 01</li><li data-component="feedback">Correct. 8 outcomes start with 01, as there are 8 possible outcomes for the remaining three positions once 0 and 1 are in the first positions.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="quick-check-1-2">
+<h2>Quick Check 1.2<a class="headerlink" href="#quick-check-1-2" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2" data-multipleanswers="false"  id="QC1_2"  style="visibility: hidden;">
+    <p>Q-2: Following the process that the code represents, what is the 23rd outcome
+in the list?</p>
+
+    <li data-component="answer"  id="QC1_2_opt_a">10101</li><li data-component="feedback">Incorrect. 10101 is the 22nd outcome in the list.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_2_opt_b">10110</li><li data-component="feedback">Correct. 10110 is the 23rd outcome in the list.</li>
+    
+    <li data-component="answer"  id="QC1_2_opt_c">11111</li><li data-component="feedback">Incorrect. 11111 is the 32nd outcome in the list.</li>
+    
+    <li data-component="answer"  id="QC1_2_opt_d">10111</li><li data-component="feedback">Incorrect. 10111 is the 24th outcome in the list.</li>
+    
+
+    </ul>
+    </div>
+    <p>Let’s look at a couple more examples.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2. There are 12 people competing for three different prizes. The same person
+can win multiple prizes, but ties are not allowed. How many possible outcomes are
+there for how the 3 prizes can be distributed to the 12 people?
+</pre></div>
+</div>
+<p>Note we can think of a three-stage process, where we give out a first,
+second, and third prize. For each stage, any of the 12 people can win, no
+matter who was picked previously. Thus, there are 12 choices for each of the
+three prizes, so our answer is <span class="math notranslate nohighlight">\(12 \cdot 12 \cdot 12 = 12^3 = 1728\)</span>.</p>
+<p>Solve the Parson’s problem below to create code that produces all the outcomes for
+this problem.</p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="Type_1_Parson1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the lines below to create code to print all the possible outcomes for distributing 3 prizes to 12 people.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="3"         data-numbered="left"  style="visibility: hidden;">
+        
+People = ['A','B','C','D','E','F','G','H','I','J','K','L']
+---
+counter = 0
+---
+for i in People:
+---
+    for j in People:
+---
+        for k in People:
+---
+            print(i,j,k)
+            counter += 1
+---
+print(counter)
+        </pre>
+        </div>
+        </div>
+    <p>Now answer the following questions about this code.</p>
+</section>
+<section id="quick-check-2-1">
+<h2>Quick Check 2.1<a class="headerlink" href="#quick-check-2-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="4" data-multipleanswers="false"  id="QC1_3"  style="visibility: hidden;">
+    <p>Q-4: What does the outcome AGA represent in the context of the problem?</p>
+
+    <li data-component="answer"  id="QC1_3_opt_a">Person A and Person G do not receive prizes</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_3_opt_b">Person A receives the first prize and the third prize, and Person G receives the second prize</li><li data-component="feedback">Correct. The each term in the output shows who received each respective prize. Because people can receive multiple prizes, here A won two prizes (first and third) and G won the second prize.</li>
+    
+    <li data-component="answer"  id="QC1_3_opt_c">Person A receives the first prize, and Person G receives the second and third prizes</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    <p>Now, let’s consider the following problem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>3. I am going to roll a 6-sided dice four consecutive times. How many
+possible outcomes are there for that sequence of four rolls?
+</pre></div>
+</div>
+</section>
+<section id="quick-check-3-1">
+<h2>Quick Check 3.1<a class="headerlink" href="#quick-check-3-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="5" data-multipleanswers="false"  id="QC1_4"  style="visibility: hidden;">
+    <p>Q-5: If you were to write code to produce outcomes, how many elements would you
+have in your starting column?</p>
+
+    <li data-component="answer"  id="QC1_4_opt_a">4</li><li data-component="feedback">Incorrect. We are rolling four times, but there are 6 options for what can occur on each roll.</li>
+    
+    <li data-component="answer"  id="QC1_4_opt_b">24</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_4_opt_c">10</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_4_opt_d">6</li><li data-component="feedback">Correct. There are 6 options for what will come up on a given roll, one for each face of the dice.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="quick-check-3-2">
+<h2>Quick Check 3.2<a class="headerlink" href="#quick-check-3-2" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="6" data-multipleanswers="false"  id="QC1_5"  style="visibility: hidden;">
+    <p>Q-6: If you were to write code to produce outcomes, how many columns
+would you have?</p>
+
+    <li data-component="answer"  id="QC1_5_opt_a">6</li><li data-component="feedback">Incorrect. You have six options per roll, but you are rolling the dice four times.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_5_opt_b">4</li><li data-component="feedback">Correct. You are rolling four times, and each roll represents a stage in the counting process.</li>
+    
+    <li data-component="answer"  id="QC1_5_opt_c">10</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_5_opt_d">24</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="quick-check-3-3">
+<h2>Quick Check 3.3<a class="headerlink" href="#quick-check-3-3" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="7" data-multipleanswers="false"  id="QC1_6"  style="visibility: hidden;">
+    <p>Q-7: Which of the following is a mathematical expression that gives the total
+number of outcomes?</p>
+
+    <li data-component="answer" data-correct='yes' id="QC1_6_opt_a">6 * 6 * 6 * 6</li><li data-component="feedback">Correct. Each time you flip, you have 6 possible outcomes (no matter what was rolled previously); as you are rolling 4 times, using the multiplication principle we yield 6*6*6*6.</li>
+    
+    <li data-component="answer"  id="QC1_6_opt_b">4 * 4 * 4 * 4 * 4 * 4</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_6_opt_c">6 * 4</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_6_opt_d">6 + 6 + 6 + 6</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    <p>If you want more practice and want to check your work, in the space below, write
+code that generates all possible outcomes for rolling a 6-sided dice four consecutive times.</p>
+</section>
+<section id="active-code">
+<h2>Active Code<a class="headerlink" href="#active-code" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type1.rst</span>, line 191)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSample3</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</aside>
+<p>Now, consider a couple of variations on this problem.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>4. Suppose now I want to roll a 6-sided dice 8 consecutive times. What
+is a mathematical expression for the number of outcomes?
+</pre></div>
+</div>
+</section>
+<section id="quick-check-4-1">
+<h2>Quick Check 4.1<a class="headerlink" href="#quick-check-4-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="8" data-multipleanswers="false"  id="QC1_7"  style="visibility: hidden;">
+    <p>Q-8: Which of the following is a mathematical expression that gives the total
+number of outcomes for this problem?</p>
+
+    <li data-component="answer"  id="QC1_7_opt_a">6 + 6 + 6 + 6 + 6 + 6 + 6 + 6</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_7_opt_b">8 * 8 * 8 * 8</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_7_opt_c">6 ^ 8</li><li data-component="feedback">Correct. There are eight dice rolls, each of which has 6 options; using the multiplication principle we get 6*6*6*6*6*6*6*6 = 6^8.</li>
+    
+    <li data-component="answer"  id="QC1_7_opt_d">8 * 8 * 8 * 8 * 8 * 8</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>5. How many outcomes are there for rolling a 4-sided dice six consecutive
+times? What is a mathematical expression for the number of outcomes?
+</pre></div>
+</div>
+</section>
+<section id="quick-check-5-1">
+<h2>Quick Check 5.1<a class="headerlink" href="#quick-check-5-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="9" data-multipleanswers="false"  id="QC1_8"  style="visibility: hidden;">
+    <p>Q-9: Which of the following is a mathematical expression that gives the total
+number of outcomes for this problem?</p>
+
+    <li data-component="answer"  id="QC1_8_opt_a">6 + 6 + 6 + 6</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_8_opt_b">4 * 4 * 4 * 4 * 4 * 4</li><li data-component="feedback">Correct. We roll the dice six times, and there are four options at each stage in the process.</li>
+    
+    <li data-component="answer"  id="QC1_8_opt_c">6 ^ 4</li><li data-component="feedback">Incorrect</li>
+    
+    <li data-component="answer"  id="QC1_8_opt_d">4 + 4 + 4 + 4 + 4 + 4</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>6. How many outcomes are there for rolling a 20-sided dice three times? Remix
+code from above to write code that would generate all possible outcomes. Then,
+select the correct answer in the multiple choice problem below.
+</pre></div>
+</div>
+</section>
+<section id="active-code-4">
+<h2>Active Code 4<a class="headerlink" href="#active-code-4" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type1.rst</span>, line 247)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Codesample4</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+
+
+  <span class="n">Quick</span> <span class="n">Check</span> <span class="mf">5.1</span>
+  <span class="o">----------------</span>
+</pre></div>
+</div>
+</aside>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="10" data-multipleanswers="false"  id="QC1_9"  style="visibility: hidden;">
+    <p>Q-10: Which of the following is a mathematical expression that gives the total
+number of outcomes for this problem?</p>
+
+    <li data-component="answer"  id="QC1_9_opt_a">20 + 20 + 20 + 20</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_9_opt_b">3^20</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_9_opt_c">20^3</li><li data-component="feedback">Correct. We roll the dice 3 times, and there are 20 options at each stage in the process.</li>
+    
+    <li data-component="answer"  id="QC1_9_opt_d">3*20</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+<section id="general-formula-for-arrangements-with-repetition">
+<h2>General formula for Arrangements with Repetition<a class="headerlink" href="#general-formula-for-arrangements-with-repetition" title="Permalink to this heading">¶</a></h2>
+<p>We now discuss a general formula for these kinds of problems.</p>
+<p>Notice that there is a commonality among the mathematical expressions that
+solve this particular kind of problem. In general, if we have <span class="math notranslate nohighlight">\(n\)</span> distinct
+objects, and we are arranging <span class="math notranslate nohighlight">\(r\)</span> of them, where repetition is allowed, there
+are <span class="math notranslate nohighlight">\(n^r\)</span> total outcomes.</p>
+<p>To see why this works, note that if we are arranging <span class="math notranslate nohighlight">\(r\)</span> elements, we can
+think of <span class="math notranslate nohighlight">\(r\)</span> stages in our counting process, and at each stage we consider how
+many options there are at that stage. Since repetition is allowed, we have <span class="math notranslate nohighlight">\(n\)</span>
+options at each stage. These are independent choices at each stage, and using
+the multiplication principle, we multiply <span class="math notranslate nohighlight">\(n\)</span> together <span class="math notranslate nohighlight">\(r\)</span> times, giving
+us <span class="math notranslate nohighlight">\(n^r\)</span>.</p>
+<p>In terms of coding problems like this, notice that we can have <span class="math notranslate nohighlight">\(n\)</span> elements in
+our initial list, and we can have <span class="math notranslate nohighlight">\(r\)</span> nested for loops cycling through these elements without restriction. These
+correspond to the <span class="math notranslate nohighlight">\(r\)</span> stages in our counting process, where at each stage we
+are cycling through all <span class="math notranslate nohighlight">\(n\)</span> options in our list.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>7. How many different license plate are there that consist of three letters,
+followed by three numbers?
+</pre></div>
+</div>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="PP_licenseplates" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Solve the following Parson’s Problem for this question.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="11"         data-numbered="left"  style="visibility: hidden;">
+        
+Numbers = [0,1,2,3,4,5,6,7,8,9]
+Letters = ['A','B','C','D','E','F','G','H','I','J','K','L',
+'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+---
+counter = 0
+---
+for i in Letters:
+---
+    for j in Letters:
+---
+        for k in Letters:
+---
+            for l in Numbers:
+---
+                for m in Numbers:
+---
+                    for n in Numbers:
+---
+                        print(i,j,k,l,m,n)
+                        print(counter)
+---
+print(counter)
+        </pre>
+        </div>
+        </div>
+    <section id="coordinating-multiple-applications-of-this-formula">
+<h3>Coordinating multiple applications of this formula<a class="headerlink" href="#coordinating-multiple-applications-of-this-formula" title="Permalink to this heading">¶</a></h3>
+<p>As is often the case, most problems will not be only a direct application of
+this formula, <span class="math notranslate nohighlight">\(n^r\)</span>, but rather they will involve or incorporate it in some
+way into a broader problem. Here we offer some examples of how this formula
+might arise or be used in problems.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>7. How many different license plates involving three letters and three digits
+are there if the three letters appear together, either at the beginning or the end of the license plate?
+</pre></div>
+</div>
+<p>Notice here that there are two cases, each of which involves our formula. In
+both cases we are considering 26 options for each letter and 10 options for
+each digit; the multiplication principle applies in each case.</p>
+<p>In one case, the three letters are at the beginning of the license plate. Then
+there are <span class="math notranslate nohighlight">\(26 \cdot 26 \cdot 26 \cdot 10 \cdot 10 \cdot 10\)</span> or <span class="math notranslate nohighlight">\(26^3 \cdot 10^3 = 17,576,000\)</span> total
+license plates.</p>
+<p>In the other case, the three letters are at the end of the license plate. Then
+there are <span class="math notranslate nohighlight">\(10 \cdot 10 \cdot 10 \cdot 26 \cdot 26 \cdot 26\)</span> or <span class="math notranslate nohighlight">\(10^3 \cdot 26^3 = 17,576,000\)</span> total
+license plates.</p>
+<p>These are distinct cases, so we can add the total together, so our total number
+of license plates is <span class="math notranslate nohighlight">\(26^3 \cdot 10^3 + 10^3 \cdot 26^3 = 35,152,000\)</span>.</p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="PP_licenseplates2" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Solve the following Parson’s Problem for this question.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="12"         data-numbered="left"  style="visibility: hidden;">
+        
+Numbers = [0,1,2,3,4,5,6,7,8,9]
+Letters = ['A','B','C','D','E','F','G','H','I','J','K','L',
+'M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+---
+counter = 0
+---
+for i in Letters:
+    for j in Letters:
+        for k in Letters:
+---
+            for l in Numbers:
+                for m in Numbers:
+                    for n in Numbers:
+---
+                        print(i,j,k,l,m,n)
+                        counter += 1
+---
+for a in Numbers:
+    for b in Numbers:
+        for c in Numbers:
+---
+            for d in Letters:
+                for e in Letters:
+                    for f in Letters:
+---
+                        print(a,b,c,d,e,f,g)
+                        counter +1 =
+---
+print(counter)
+        </pre>
+        </div>
+        </div>
+    <p>Now let’s try another problem.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>8. At my bank, a PIN consists of 4 digits (from 0 to 4). How many PINs
+are there with no consecutive digits?
+</pre></div>
+</div>
+<p>Note, here, we can apply our formula. We can think of a 4-stage process, where
+in each stage we consider the number of options for each respective digit
+(first, second, third, and fourth). In the first stage we can choose any number,
+so there are 5 options. In the second stage, we can choose any number except
+what was chosen first, so there are 4 options. In the third stage, we can choose
+any number except what was chosen directly previously, so again there are 4
+options. In the fourth stage, again we have 4 options.</p>
+<p>So, our final answer is <span class="math notranslate nohighlight">\(5 \cdot 4^3 = 320\)</span>.</p>
+<p>Run the code and examine the output.</p>
+</section>
+</section>
+<section id="active-code-5">
+<h2>Active Code 5<a class="headerlink" href="#active-code-5" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type1.rst</span>, line 407)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">CodeSample5</span>
+  <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span>
+  <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">minus</span> <span class="n">item1</span>
+  <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">minus</span> <span class="n">item2</span>
+  <span class="p">:</span><span class="n">col4</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">minus</span> <span class="n">item3</span>
+
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="quick-check-8-1">
+<h2>Quick Check 8.1<a class="headerlink" href="#quick-check-8-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="13" data-multipleanswers="false"  id="QC1_10"  style="visibility: hidden;">
+    <p>Q-13: What does the statement “minus item2” accomplish?</p>
+
+    <li data-component="answer"  id="QC1_10_opt_a">It makes sure the second digit is not the same as the first digit.</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer"  id="QC1_10_opt_b">It makes sure the third digit is not the same as the first digit.</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="QC1_10_opt_c">It makes sure the third digit is not the same as the second digit.</li><li data-component="feedback">Correct. All we need for this problem to ensure non-consecutivity is to have each digit not be equal to the digit directly preceding it.</li>
+    
+    <li data-component="answer"  id="QC1_10_opt_d">It makes sure the third digit is not the same as either of the first two digits.</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    </section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - Combinatorics - Four Basic Problem Types' data-toggle="tooltip">
+  <a href="FourMainProblemTypes.html" aria-label="Previous - Combinatorics - Four Basic Problem Types">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - Type 2 - Arrangement without Repetition - Permutations' data-toggle="tooltip" >
+    <a href="Type2.html" aria-label="Next - Type 2 - Arrangement without Repetition - Permutations">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 PCAS.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.3.11.
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>

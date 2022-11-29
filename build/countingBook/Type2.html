@@ -1,0 +1,733 @@
+<!-- ****************************************
+     |docname| - main template for this theme
+     **************************************** -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Type 2 - Arrangement without Repetition - Permutations &#8212; Runestone Interactive Overview</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css?v=58BC228F" />
+    <link rel="stylesheet" type="text/css" href="_static/webgldemo.css?v=B36B48D" />
+    <link rel="stylesheet" type="text/css" href="_static/webglinteractive.css?v=910DF1E1" />
+    <link rel="stylesheet" type="text/css" href="_static/CodeChat.css" />
+    <link rel="stylesheet" type="text/css" href="_static/accessibility.css?v=50109A2C" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/637.fafafbd97df8a0d1.css?v=B5361BC8" />
+    <link rel="stylesheet" type="text/css" href="_static/runestone.8ac5fc15dd0c9c26.css?v=3287D97E" />
+
+
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/matrixeq.js?v=D64CFA5A"></script>
+    <script src="_static/webglinteractive.js?v=2B768384"></script>
+    <script src="_static/FileSaver.min.js?v=8408C997"></script>
+    <script src="_static/html4css1.css?v=4533ACD3"></script>
+    <script src="_static/animationbase.js?v=A043C3A7"></script>
+    <script src="_static/runtime.46feaa1582dad0f9.bundle.js?v=23EF70E9"></script>
+    <script src="_static/637.d54be67956c5c660.bundle.js?v=915B1670"></script>
+    <script src="_static/runestone.e81005127a61c5fc.bundle.js?v=9BA4BB46"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Type 3 - Selection Without Repetition - Combinations" href="Type3.html" />
+    <link rel="prev" title="Type 1 - Arrangement with Repetition" href="Type1.html" />
+
+
+<link rel="shortcut icon" href="/runestone/static/favicon.ico" type="image/ico" />
+
+
+
+<link rel="canonical" href="https://{{canonical_host}}{{new_server_prefix}}/books/published/{{base_course}}/{{pagepath}}" />
+
+
+<script>
+  eBookConfig = {};
+  
+    
+    eBookConfig.useRunestoneServices = {{use_services}};
+    eBookConfig.host = '';
+    eBookConfig.app = eBookConfig.host + '/runestone';
+    eBookConfig.course = '{{ course_name }}';
+    eBookConfig.basecourse = '{{ base_course }}';
+    eBookConfig.isLoggedIn = {{ is_logged_in}};
+    eBookConfig.email = '{{ user_email }}';
+    eBookConfig.isInstructor = {{ is_instructor }};
+    eBookConfig.username = '{{ user_id}}';
+    eBookConfig.readings = {{ readings|safe}};
+    eBookConfig.activities = {{ activity_info|safe }}
+    eBookConfig.downloadsEnabled = {{downloads_enabled}};
+    eBookConfig.allow_pairs = {{allow_pairs}}
+    eBookConfig.enableCompareMe = {{enable_compare_me}};
+    // _`new_server_prefix`: Defined by the server to be the path to the new server.
+    eBookConfig.new_server_prefix = '{{ new_server_prefix }}';
+    
+  
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.python3 = false;
+  eBookConfig.acDefaultLanguage = 'python' ? 'python' : 'python'
+  eBookConfig.runestone_version = '6.3.11';
+  eBookConfig.jobehost = 'http://jobe2.cosc.canterbury.ac.nz';
+  eBookConfig.proxyuri_runs = '/jobe/index.php/restapi/runs/';
+  eBookConfig.proxyuri_files = '/jobe/index.php/restapi/files/';
+  eBookConfig.enable_chatcodes = false ? false : false;
+  eBookConfig.enableScratchAC = true;
+
+</script>
+
+<!-- Ad Serving Headers Only serve ads to Anonymous Users -->
+
+    
+        {% if serve_ad is defined and serve_ad and settings.adsenseid %}
+         <script data-ad-client="{{settings.adsenseid}}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        {% endif %}
+    
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="navbar toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        
+        
+          <a class="brand-logo" href="/runestone/default/user/login" aria-label="Login"><img src="_static/img/RAIcon.png" alt=""></a>
+        
+        <a class="navbar-brand" href="index.html" aria-label="index-page">
+          
+            
+            {{ course_name }}
+            
+          
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" >
+
+        <li class="divider-vertical"></li>
+        <li><span id="browsing_warning"></span></li>
+
+        <!-- social media dropdown -->
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-globe" style="opacity: 0.9"><span class="visuallyhidden" aria-label="Social">Social</span></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone">Follow @iRunestone</a>
+                <a href="https://www.facebook.com/RunestoneInteractive">Our Facebook Page</a>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li><!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'><span class="visuallyhidden" aria-label="Search">Search</span></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html' aria-label="index-page">Table of Contents</a></li>
+            
+            <li><a href='genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+        <!-- <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li> -->
+
+        <!-- <li class="dropdown">             -->
+          <li id="scratch_ac_link" class="dropdown"><a href="javascript:runestoneComponents.popupScratchAC()">
+              <i class="glyphicon glyphicon-pencil" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Scratch Activecode" >Scratch Activecode</span></i></a></li>
+        <!-- </li> -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"><span class="visuallyhidden" aria-label="Help">Help</span></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='http://runestoneinteractive.org/pages/faq.html'>FAQ</a></li>
+            <li><a href='https://runestone.academy/ns/books/published/instructorguide/index.html'>Instructors Guide</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/default/reportabug?course=countingBook&page=Type2'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+      
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        
+          
+            <script></script>
+<li class="dropdown globaltoc-container">
+    <a
+        href="index.html"
+        class="dropdown-toggle"
+        data-toggle="dropdown"
+        aria-label="index"
+        >This Chapter<b class="caret"></b
+    ></a>
+    <ul class="dropdown-menu globaltoc">
+         
+        {% for row in subchapter_list %}
+        <li class="toctree-l1">
+            <a class="reference internal" href="{{ row['subchap_uri']}}"
+                >{{ row['title']}}</a
+            >
+        </li>
+        {% endfor %} 
+        
+    </ul>
+</li>
+          
+          <li class="divider-vertical"></li>
+        
+        <!-- 
+          
+  <li id="relations-prev" title="Previous Chapter - Type 1 - Arrangement with Repetition" data-toggle="tooltip">
+    <a href="Type1.html" >
+      <i class='glyphicon glyphicon-backward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  
+  <li id="relations-next" title='Next Chapter - Type 3 - Selection Without Repetition - Combinations' data-toggle="tooltip" >              
+    <a href="Type3.html" >
+        <i class='glyphicon glyphicon-forward' style='opacity:0.9;'></i>
+    </a>
+  </li>
+  <li class="divider-vertical"></li>
+
+<script>
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  window.addEventListener('load', (event) => {
+    $('#relations-prev').tooltip(opts);
+    $('#relations-next').tooltip(opts);
+  });
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+      </div> <!-- navbar-collapse -->
+    </div> <!-- navbar -->
+  </div> <!-- container -->
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content" role="main">
+
+<!-- Ad Serving for Runestone Campaign -->
+
+    
+        {% if settings.num_banners > 0 and settings.show_rs_banner %}
+         <div style="width: 100%;">
+            <a href="/runestone/default/donate?banner={{banner_num}}">
+            <img class="runestone-banner"
+                 src="/runestone/static/images/RunestoneBanner{{banner_num}}.png"
+                 alt="Please Support Runestone"
+                 style="display: block; width: 728px; margin-left: auto; margin-right: auto; margin-top: 10px;">
+            </a>
+         </div>
+        {% endif %}
+    
+
+
+  
+  <section id="type-2-arrangement-without-repetition-permutations">
+<h1>Type 2 - Arrangement without Repetition - Permutations<a class="headerlink" href="#type-2-arrangement-without-repetition-permutations" title="Permalink to this heading">¶</a></h1>
+<p>In this section, we present some tasks involving arrangement without repetition
+problems. In our 2x2 grid, this is the cell in which repetition is not allowed,
+and we are counting ordered outcomes (or arrangements). In problems like these,
+we can employ multi-stage processes, where the number of options is reduced at
+each stage, because repetition is not allowed.</p>
+<p>For instance, consider the following problem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="s2">&quot;How many arrangements are there of the numbers 1, 2, 3, and 4?&quot;</span>
+</pre></div>
+</div>
+<p>Here, we have four positions, and we can employ a 4-stage process we consider
+the number of options at each position. Note that once a number is selected
+for the first position, that number now cannot be used again, so the number of
+options for the second position is reduced by 1. The same is true for the third
+and fourth positions. Because there is the same number of options no matter what
+particular element was chosen at each stage, the number of options are
+independent, and so we can use the multiplication principle. We get
+<span class="math notranslate nohighlight">\(4 \cdot 3 \cdot 2 \cdot 1 = 24\)</span> total outcomes.</p>
+<p>Below is some code that generates all of the outcomes.</p>
+<p>Notice the outcomes themselves - repetition is not allowed (we do not get
+something like 1 1 1 1 or 2 4 1 4), and we are counting ordered outcomes
+(1 2 3 4 and 2 1 4 3 are listed as distinct outcomes).</p>
+<section id="active-code">
+<h2>Active Code<a class="headerlink" href="#active-code" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type2.rst</span>, line 33)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Type_2_CodeSample1</span>
+    <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">4</span>
+    <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span>
+    <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">minus</span> <span class="n">item1</span>
+    <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">minus</span> <span class="n">item1</span> <span class="n">minus</span> <span class="n">item2</span>
+    <span class="p">:</span><span class="n">col4</span><span class="p">:</span> <span class="o">=</span><span class="n">data1</span> <span class="n">minus</span> <span class="n">item1</span> <span class="n">minus</span> <span class="n">item2</span> <span class="n">minus</span> <span class="n">item3</span>
+</pre></div>
+</div>
+</aside>
+<p>As another example, consider the following problem.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2. How many ways are there to arrange three friends, John, Angel, and
+Dan in a row?
+</pre></div>
+</div>
+<p>This is an arrangement without repetition problem because we are counting
+ordered arrangements (John, Dan, Angel is a different arrangement than Angel,
+Dan, John). And, once a friend is placed in a position, they cannot sit in
+another position, and so repetition is not allowed. (That is, we will never
+have an outcome like John, John, John, as that does not make sense in the
+context of the problem.) How many arrangements are there of three friends?
+What is a mathematical expression for this?</p>
+<p>Below, remix code from the previous problem to write code that produces all possible
+arrangements of your friends Angel, Dan, and John. Check to see if you get what you expect,
+and look at the outcomes to see if the output makes sense.</p>
+</section>
+<section id="id1">
+<h2>Active Code<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type2.rst</span>, line 59)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span>  <span class="n">Type_2_CodeSample2</span>
+    <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>3. How many ways are there to arrange the letters in the word ROCKET?
+</pre></div>
+</div>
+<p>First, make a guess as to what you think the total will be. Write it here.</p>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="1" id="Type_2_fitb1"  style="visibility: hidden;">
+            <p>Q-1: I think that there are <input type="text"> rearrangements of the letters in the word ROCKET</p>
+
+        <script type="application/json">
+            [[{"number": [120, 120], "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is 120.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            <p>Fill in the code below, but do not run it, and then answer the following questions.</p>
+</section>
+<section id="id2">
+<h2>Active Code<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type2.rst</span>, line 82)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Type_2_CodeSample3</span>
+    <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="quick-check-1-1">
+<h2>Quick Check 1.1<a class="headerlink" href="#quick-check-1-1" title="Permalink to this heading">¶</a></h2>
+
+    <div class="runestone ">
+    <ul data-component="multiplechoice" data-question_label="2" data-multipleanswers="false"  id="Type_2_MC1_1"  style="visibility: hidden;">
+    <p>Q-2: What is an expression that is represented by the structure of the code and the structure of the output?</p>
+
+    <li data-component="answer"  id="Type_2_MC1_1_opt_a">6*6*6*6*6*6</li><li data-component="feedback">Incorrect.</li>
+    
+    <li data-component="answer" data-correct='yes' id="Type_2_MC1_1_opt_b">6*5*4*3*2*1</li><li data-component="feedback">Correct.</li>
+    
+    <li data-component="answer"  id="Type_2_MC1_1_opt_c">6+5+4+3+2+1</li><li data-component="feedback">Incorrect.</li>
+    
+
+    </ul>
+    </div>
+    <p>If you were to run the code above, think about what the output would be.</p>
+<p>How many of the outcomes in the output of this code will start with “O” as the
+first letter? How many will start with “ET”? Answer this question below.</p>
+
+        <div class="runestone ">
+        <div data-component="fillintheblank" data-question_label="3" id="Type_2_fitb2"  style="visibility: hidden;">
+            <p>Q-3: <input type="text"> of the outcomes will start with “O”, and <input type="text"> of the outcomes will start with “ET”.</p>
+
+        <script type="application/json">
+            [[{"number": [120, 120], "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is 120.</p>\n"}], [{"number": [24, 24], "feedback": "<p>Correct.</p>\n"}, {"regex": "^\\s*x\\s*$", "regexFlags": "i", "feedback": "<p>Incorrect. The answer is 24.</p>\n"}]]
+        </script>
+
+        </div>
+        </div>
+            </section>
+<section id="general-formula-for-arrangements-without-repetition-of-all-n-elements">
+<h2>General formula for Arrangements without Repetition of all <span class="math notranslate nohighlight">\(n\)</span> elements<a class="headerlink" href="#general-formula-for-arrangements-without-repetition-of-all-n-elements" title="Permalink to this heading">¶</a></h2>
+<p>In the problems above, we arranged all of the elements in a given set (all of
+the numbers, all of the friends, all of the letters). When we are arranging all
+<span class="math notranslate nohighlight">\(n\)</span> elements in a set, there is a general formula that we can use. In general,
+if we have <span class="math notranslate nohighlight">\(n\)</span> distinct objects, and we are arranging all <span class="math notranslate nohighlight">\(n\)</span> of them where repetition
+is not allowed, there are <span class="math notranslate nohighlight">\(n\)</span> choices for the first position, <span class="math notranslate nohighlight">\(n-1\)</span>
+for the second, <span class="math notranslate nohighlight">\(n-2\)</span> for the third, etc. It is useful to think of this as
+a product of <span class="math notranslate nohighlight">\(n\)</span> terms, <span class="math notranslate nohighlight">\(n \cdot (n-1) \cdot (n-2) \cdot \ldots \cdot
+3 \cdot 2 \cdot 1\)</span>. This expression, the product of the positive integers from
+<span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(n\)</span> is written as <span class="math notranslate nohighlight">\(n!\)</span>.</p>
+<p>This is called “<span class="math notranslate nohighlight">\(n\)</span> factorial,” and it both represents the mathematical expression
+of the product of positive integers from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(n\)</span>, and the number of arrangements
+of <span class="math notranslate nohighlight">\(n\)</span> distinct objects. For example, then, there are <span class="math notranslate nohighlight">\(20!\)</span> ways to arrange 20
+different books in a row on a shelf, there are <span class="math notranslate nohighlight">\(150!\)</span> ways to rank 150 restaurants
+in a given city, and there are <span class="math notranslate nohighlight">\(26!\)</span> arrangements of the letters in the alphabet.</p>
+<p>While <span class="math notranslate nohighlight">\(n!\)</span> gives the total number of arrangements of an entire set of <span class="math notranslate nohighlight">\(n\)</span> elements,
+sometimes we want to arrange SOME but not ALL of the elements in a set.
+Consider the following problem.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>4. Nine horses compete in a race, and there will be a first, second, and third
+prize given (assume no ties). How many possibilities are there for how prizes are
+distributed to the horses?
+</pre></div>
+</div>
+<p>Note in this case, we only want to count arrangements of 3 of the 9 horses.
+Here we have a 3-stage process, and our number of options at each stage are
+reduced by 1. In particular, we have 10 options for who receives first place, 9
+options for second (because whichever horse placed first cannot also place second),
+and 8 options for third. Our expression is <span class="math notranslate nohighlight">\(9 \cdot 8 \cdot 7 = 504\)</span>.</p>
+<p>Write some code to solve this problem (remixing code from previous problems if
+you wish).</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type2.rst</span>, line 153)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Type_2_CodeSample4</span>
+   <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</aside>
+
+<div class="runestone">
+<div data-component="shortanswer" data-question_label="4" class="journal" id=short-ex1  >
+<p>Q-4: In the space below, explain how you know how many columns your code
+should have.</p>
+
+</div>
+</div> <!-- end of runestone div -->
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>5. There are 8 possible class projects and four teams of students who will work on those
+projects. In how many ways can the projects be assigned to the students if
+each team works on one project, and no two teams can work on the same project?
+</pre></div>
+</div>
+<p>We consider a four-stage process of assigning a project to each of four different
+teams. There are 8 options for which project the first team gets, then 7 for the
+second team since projects cannot be repeated, then 6 for the third and 5 for
+the fourth. Thus our expression is <span class="math notranslate nohighlight">\(8 * 7 * 6 * 5 = 1680\)</span>.</p>
+<p>Solve the following Parson’s problem to create code that generates all 1680 possibilities
+for assigning projects to teams of students.</p>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="Type_2_Parson1" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Arrange the lines below to create code to print all the possible outcomes for
+assigning 8 possible projects to 4 teams of students.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="5"         data-numbered="left"  style="visibility: hidden;">
+        
+Projects = ['P1','P2','P3','P4','P5','P6','P7','P8']
+---
+counter = 0
+---
+for i in Projects:
+    for j in Projects:
+---
+        if j!=i:
+            for k in Projects:
+---
+                if k!=j and k!=i:
+                    for l in Projects:
+---
+                        if l!=k and l!=j and l!=i:
+                            print(i,j,k,l)
+                            counter += 1
+---
+print(counter)
+        </pre>
+        </div>
+        </div>
+    </section>
+<section id="general-formula-for-arrangements-without-repetition">
+<h2>General Formula for Arrangements without Repetition<a class="headerlink" href="#general-formula-for-arrangements-without-repetition" title="Permalink to this heading">¶</a></h2>
+<p>Notice that there is a commonality among the mathematical expressions that solve
+this particular kind of problem. In general, if we have <span class="math notranslate nohighlight">\(n\)</span> distinct objects, and
+we are arranging <span class="math notranslate nohighlight">\(r\)</span> of them where repetition is not allowed, there are <span class="math notranslate nohighlight">\(n\)</span> choices
+for the first position, <span class="math notranslate nohighlight">\(n-1\)</span> for the second, <span class="math notranslate nohighlight">\(n-2\)</span> for the third, etc. It is
+useful to think of this as a product of <span class="math notranslate nohighlight">\(r\)</span> terms, <span class="math notranslate nohighlight">\(n \cdot (n-1) \cdot (n-2)
+\cdot \ldots \cdot (n-r+1)\)</span>. This expression is sometimes denoted as <span class="math notranslate nohighlight">\(P(n,r)`\)</span> or
+<span class="math notranslate nohighlight">\(_nP_r\)</span>, where <span class="math notranslate nohighlight">\(P\)</span> stands for permutation. Note that this product can
+be rewritten efficiently as a ratio of two factorials, because as terms cancel we
+get the desired product: <span class="math notranslate nohighlight">\(\frac{n!}{(n-r)!}\)</span></p>
+<p>In terms of coding problems like these, notice that we can have <span class="math notranslate nohighlight">\(n\)</span> elements in
+our initial list, and we have <span class="math notranslate nohighlight">\(r\)</span> nested for loops with the restriction that
+elements cannot be repeated. These correspond to the <span class="math notranslate nohighlight">\(r\)</span> stages in our counting
+process, where at each stage we are cycling through all <span class="math notranslate nohighlight">\(n\)</span> options in our list,
+excluding elements that cannot be repeated as we go.</p>
+<p>As is often the case, most problems will not be only a direct application of this
+formula, but rather they will involve or incorporate that formula in some way
+into a broader problem. Here we offer some examples of how this formula might
+arise or be used in problems.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>6. How many arrangements of the letters in the word CATTLE have the Ts together
+at the beginning or the end of the word?
+</pre></div>
+</div>
+<p>Here we have two cases - when the Ts are at the beginning of the word and when
+the Ts are at the end of the word. If the Ts are at the beginning, there are 4!
+ways to arrange the rest of the letters, and if the Ts are at the end, there are
+4! ways to arrange the rest of the letters. We can add these two distinct cases,
+so we get a final expression of <span class="math notranslate nohighlight">\(4! + 4! = 48\)</span>. The program below lists the first case of these
+outcomes. How would the code change if we were counting the second case?</p>
+<aside class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<span class="docutils literal">/Users/edodoo/Documents/GitHub/countingBook/_sources/Type2.rst</span>, line 239)</p>
+<p>Unknown directive type “countingsheet”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">countingsheet</span><span class="p">::</span> <span class="n">Cattle</span>
+    <span class="p">:</span><span class="n">ncols</span><span class="p">:</span> <span class="mi">6</span>
+    <span class="p">:</span><span class="n">col1</span><span class="p">:</span> <span class="n">T</span>
+    <span class="p">:</span><span class="n">col2</span><span class="p">:</span> <span class="n">T</span>
+    <span class="p">:</span><span class="n">col3</span><span class="p">:</span> <span class="n">C</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">E</span>
+    <span class="p">:</span><span class="n">col4</span><span class="p">:</span> <span class="o">=</span><span class="n">data3</span> <span class="n">minus</span> <span class="n">item3</span>
+    <span class="p">:</span><span class="n">col5</span><span class="p">:</span> <span class="o">=</span><span class="n">data3</span> <span class="n">minus</span> <span class="n">item3</span> <span class="n">minus</span> <span class="n">item4</span>
+    <span class="p">:</span><span class="n">col6</span><span class="p">:</span> <span class="o">=</span><span class="n">data3</span> <span class="n">minus</span> <span class="n">item3</span> <span class="n">minus</span> <span class="n">item4</span> <span class="n">minus</span> <span class="n">item5</span>
+</pre></div>
+</div>
+</aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>7. You have 10 different hardcover books and 8 different paperback books.
+How many ways are there to arrange 3 hardback books and 5 paperback books if
+each kind of book has to be in a block together?
+</pre></div>
+</div>
+
+        <div class="runestone parsons-container ">
+        <div data-component="parsons" id="PP_books" class="parsons" >
+        <div class="parsons_question parsons-text" >
+    <p>Solve the following Parson’s Problem for this question.</p>
+
+        </div>
+        <pre  class="parsonsblocks" data-question_label="6"         data-numbered="left"  style="visibility: hidden;">
+        
+Hardcover = ['H1','H2','H3','H4','H5','H6','H7','H8','H9','H10']
+Paperback = ['P1','P2','P3','P4','P5','P6','P7','P8']
+
+---
+counter = 0
+---
+for i in Hardcover:
+    for j in Hardcover:
+        if j != i:
+---
+            for k in Hardocver:
+                if k!=j and k!= i:
+---
+                    for l in Paperback:
+                        for m in Paperback:
+                            if m!= l:
+---
+                                for n in Paperback:
+                                    if n != m and n!= l:
+
+---
+                                        print(i,j,k,l,m,n)
+                                        counter +=1
+---
+for i in Paperback:
+    for j in Paperback:
+        if j != i:
+---
+            for k in Paperback:
+                if k!=j and k!= i:
+---
+                    for l in Hardcover:
+                        for m in Hardcover:
+                            if m!= l:
+---
+                                for n in Hardcover:
+                                    if n != m and n!= l:
+---
+                                        print(i,j,k,l,m,n)
+                                        counter +=1
+---
+print(counter)
+        </pre>
+        </div>
+        </div>
+    <p>Here we have two cases - either the hardcover books are first, or the paperback
+books are first. In the first case, we have a two-stage counting process of first
+arranging the three hardcover books (there are <span class="math notranslate nohighlight">\(\frac{10!}{(10-3)!}\)</span> such
+arrangements) and then arranging the paperback books (there are <span class="math notranslate nohighlight">\(\frac{8!}{(8-5)!}\)</span>
+such arrangements). Because for each of those stages, the number of choices is
+independent, we can use the multiplication principle. Thus, the number of arrangements
+with hardcover then paperback books is <span class="math notranslate nohighlight">\(P(10,3)\cdot P(8,5)\)</span>, or <span class="math notranslate nohighlight">\(\frac{10!}{(10-3)!}
+\cdot \frac{8!}{(8-5)!}.\)</span></p>
+<p>The second case is similar - first we arrange paperback books (<span class="math notranslate nohighlight">\(\frac{8!}{(8-5)!}\)</span>),
+then we arrange hardcover books <span class="math notranslate nohighlight">\(\frac{10!}{(10-3)}!\)</span>. Again we use the
+multiplication principle, so the number of arrangements with paperback then
+hardcover books is <span class="math notranslate nohighlight">\(P(8,5) \cdot P(10,3)\)</span>, or <span class="math notranslate nohighlight">\(\frac{8!}{(8-5)!} \cdot \frac{10!}{(10-3)!}.\)</span></p>
+<p>For the total, we add both cases, so our total is <span class="math notranslate nohighlight">\(\frac{10!}{(10-3)!} \cdot
+\frac{8!}{(8-5)!} + \frac{8!}{(8-5)!} \cdot \frac{10!}{(10-3)!} = 483840.\)</span></p>
+</section>
+</section>
+
+
+  <div id="scprogresscontainer">
+    You have attempted <span id="scprogresstotal"></span> of <span id="scprogressposs"></span> activities on this page <div id="subchapterprogress" aria-label="Page progress"></div>
+  </div>
+
+  <ul role="navigation" class="nextprev-list nextprev-list" aria-label="Change page">
+<li id="relations-prev" class="navLink" title='Previous Section - Type 1 - Arrangement with Repetition' data-toggle="tooltip">
+  <a href="Type1.html" aria-label="Previous - Type 1 - Arrangement with Repetition">
+    <i class='prevNav glyphicon glyphicon-chevron-left'  style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black;"></i>
+  </a>
+</li>
+
+  <li id="relations-next" class="navLink" title='Next Section - Type 3 - Selection Without Repetition - Combinations' data-toggle="tooltip" >
+    <a href="Type3.html" aria-label="Next - Type 3 - Selection Without Repetition - Combinations">
+      <i id="relationsNextIcon" class='nextNav glyphicon glyphicon-chevron-right' style="top:50%; transform:translateY(-50%)translateX(-50%); left: 50%; color:black; "></i>
+    </a>
+  </li>
+</ul>
+
+<script>
+window.addEventListener('load', (event) => {
+  $('#relations-prev').tooltip({'placement': 'right', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement': 'left', 'delay': { show: 100, hide: 50}});
+});
+</script>
+
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2022 PCAS.
+      Created using <a href="http://runestoneinteractive.org/">Runestone</a> 6.3.11.
+    </p>
+  </div>
+</footer>
+
+
+
+  
+    {% if settings.google_ga %}
+      <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{{ settings.google_ga }}']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+    {% endif %}
+  
+
+  
+    <script type="application/json" class="js-hypothesis-config">
+    {
+      "showHighlights": false
+    }
+    </script>
+
+    <script async src="https://hypothes.is/embed.js"></script>
+    <!--provide space to prevent hypothes.is sidebar from obscuring content-->
+    <style>@media screen and (max-width:767px) { body { padding-right: 21px; }}</style>
+
+  
+
+
+<script>
+  window.addEventListener('load', (event) => {
+    runestoneComponents.getSwitch();
+  });
+</script>
+
+
+  </body>
+</html>
