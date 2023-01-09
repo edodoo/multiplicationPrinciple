@@ -144,36 +144,58 @@ Problem: Username
 ~~~~~~~~~~~~~~~~~~~~~
 
   You are deciding on a username for social media. To keep things simple, you decide
-  that it will have one letter and one number, where either the number comes first
-  (such as 9I) or the letter comes first (such as I9). How many ways are there to
+  that it will have two letters and two numbers, where either the numbers come first
+  (such as 79HI) or the letters come first (such as HI79). How many ways are there to
   create such a username?
 
 Here, we can break the usernames into two cases, based on whether or not the numbers
-come first. If the numbers come first, then there are :math:`10 \times 26` ways to
-create a username. If the letters come first, then there are :math:`26 \times 10^2`
-ways to create a username. Hence, there are :math:`10\times26 + 26\times 10`
+come first. If the numbers come first, then there are :math:`10^2\times 26^2` ways to
+create a username. If the letters come first, then there are :math:`26^2 \times 10^2`
+ways to create a username. Hence, there are :math:`10^2\times26^2 + 26^2\times 10^2`
 total ways to create a username.
 
-The code below is meant to reflect this process and this case breakdown.
-In particular, only the first case is shown, where the first column corresponds to the letter and the second the number.
-What would the second case look like?
+The code below is meant to reflect this process and this case breakdown. In particular,
+the two successive sets of nested for loops correspond to the two cases. In the
+first set of loops, we compute the usernames that consist of numbers followed by
+letters. In the second set of loops, we compute the usernames that consist of
+letters followed by numbers.
 
 Look at the code below. Before you run it, answer the following multiple choice
 question.
 
 .. mchoice:: AP_2
-    :correct: a
-    :answer_a: 260
-    :answer_b: 520
-    :feedback_a: Correct.
+    :correct: c
+    :answer_a: 135200
+    :answer_b: 67600
+    :answer_c: First 67600 then 135200
+    :feedback_a: Incorrect.
     :feedback_b: Incorrect.
+    :feedback_c: Correct.
 
-    How many letter-number pairs do you expect to see when you run it?
+    What do you expect the output of the code to be, when you run it?
 
-.. countingsheet:: Usernames
-    :ncols: 2
-    :col1: A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z
-    :col2: 0,1,2,3,4,5,6,7,8,9
+
+.. activecode:: Usernames
+    :coach:
+
+    Numbers = [0,1,2,3,4,5,6,7,8,9]
+    Letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    counter=0
+
+    for i in Numbers:
+        for ii in Numbers:
+            for j in Letters:
+                for jj in Letters:
+                    counter+=1
+    print(counter)
+
+    for k in Letters:
+        for kk in Letters:
+            for l in Numbers:
+                for ll in Numbers:
+                    counter+=1
+    print(counter)
+
 
 Problem: Book Genres
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,7 +218,37 @@ Problem: Book Genres
     Which of the following expressions counts the number of ways to bring two
     books from different genres with you?
 
-(Aside, this is where the parsons problem was, and can we do a similar but horizontal style here?)
+
+.. parsonsprob:: AS_Parson1
+    :numbered: left
+
+    Arrange the lines below to create code to print all the ways to bring the books
+    with you on vacation, so that the order of the books corresponds to the order of
+    terms in 7*5 + 7*3 + 5*3.
+    -----
+
+    HP = ['HP1', 'HP2', 'HP3', 'HP4', 'HP5', 'HP6', 'HP7']
+    GoT = ['GoT1', 'GoT2', 'GoT3', 'GoT4', 'GoT5']
+    LOTR = ['LOTR1', 'LOTR2', 'LOTR3']
+    =====
+    for i in HP:
+    =====
+        for ii in GoT:
+    =====
+            print(i,ii)
+    =====
+    for j in HP:
+    =====
+        for jj in LOTR:
+    =====
+            print(j,jj)
+    =====
+    for k in GoT:
+    =====
+        for kk in LOTR:
+    =====
+            print(k,kk)
+
 
 
 Subtraction Principle
@@ -297,10 +349,18 @@ Problem: Hotel
   Steve and Royce arrive at a hotel that has 10 available rooms. They decide to book
   rooms so that they don't share a room. Examine the following code.
 
-  .. countingsheet:: Hotel_Code_1
-      :ncols: 2
-      :col1: 1,2,3,4,5,6,7,8,9,10
-      :col2: =data1 minus item1
+  .. activecode:: HotelCode_1
+      :coach:
+
+      Rooms = [1,2,3,4,5,6,7,8,9,10]
+      counter=0
+
+      for Steve in Rooms:
+          for Royce in Rooms:
+              if Steve!=Royce:
+                  print(Steve, Royce)
+                  counter+=1
+      print(counter)
 
   .. mchoice:: H_1
       :correct: a

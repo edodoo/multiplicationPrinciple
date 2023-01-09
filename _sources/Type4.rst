@@ -85,11 +85,21 @@ In particular, the following code is written to list out all possible nondecreas
 sequences of the numbers 1 through 6. Run this code. Do you get what you expect?
 
 
-.. countingsheet:: Type_4_CodeSample1
-  :ncols: 3
-  :col1: 1,2,3,4,5,6
-  :col2: =data1 after index1
-  :col3: =data1 after index2
+.. activecode:: Type_4_CodeSample1
+   :coach:
+   :caption: Create some code
+
+   HotDogs = [1,2,3,4,5,6]
+   counter = 0
+
+   for i in HotDogs:
+       for j in HotDogs:
+           if j >= i:
+               for k in HotDogs:
+                   if k >= j:
+                       print(i,j,k)
+                       counter = counter + 1
+   print(counter)
 
 
 Please answer the following questions about this code.
@@ -114,7 +124,19 @@ Quick Check 1
 
 Quick Check 2
 =================
- Which part of the code helps us ensure that the sequences we are counting are nondecreasing?
+
+.. mchoice:: Type_4_MC1_2
+  :correct: d
+  :answer_a: HotDogs = [1,2,3,4,5,6]
+  :answer_b: print(i,j,k)
+  :answer_c: for i in HotDogs:
+  :answer_d: if k >= j:
+  :feedback_a: Incorrect.
+  :feedback_b: Incorrect.
+  :feedback_c: Incorrect.
+  :feedback_d: Correct.
+
+  Which part of the code helps us ensure that the sequences we are counting are nondecreasing?
 
 Finding a General Solution
 ----------------------------
@@ -218,21 +240,31 @@ solution:
 Practice Problems
 ----------------------
 
-1.) Suppose there are 9 types of doughnuts at the bakery, and you are picking up
+1.) Suppose there are 12 types of doughnuts at the bakery, and you are picking up
 4 for a meeting. Write code that will find the number of ways to do this.
 
-.. countingsheet:: Type_4_PP1
-  :ncols: 4
-  :col1: 1,2,3,4,5,6,7,8,9
-  :col2: =data1 after index1
-  :col3: =data1 after index2
-  :col4: =data1 after index3
+.. activecode:: Type_4_PP1
+   :coach:
+   :caption: Create some code
 
+   Doughnuts = [1,2,3,4,5,6,7,8,9,10,11,12]
+   counter = 0
+
+   for i in Doughnuts:
+       for j in Doughnuts:
+           if j >= i:
+               for k in Doughnuts:
+                   if k >= j:
+                       for l in Doughnuts:
+                           if l >= k:
+                               #print(i,j,k,l)
+                               counter = counter + 1
+   print(counter)
 
 .. fillintheblank:: Type4_PP1_2
    :casei:
 
-   The total number of ways to select nine doughnuts from four types is |blank|.
+   The total number of ways to select a dozen doughnuts from five types is |blank|.
 
-   -   :495: Correct.
-       :x: Incorrect. The answer is 495.
+   -   :1365: Correct.
+       :x: Incorrect. The answer is 1365.

@@ -17,13 +17,29 @@ Problem 1:
 ------------------
 
 The code below will print all the ways to create a three-letter word from the letters
-``A, B, C, D, E``, where letters can be repeated.
+``A, B, C, D, E``, where letters can be repeated. The code is hidden, so you do not
+need to write it yourself.
 
-.. countingsheet:: WithRepeats
-  :ncols: 3
-  :col1: A,B,C,D,E
-  :col2: =data1
-  :col3: =data1
+.. activecode:: WithRepeats
+    :coach:
+
+    # The hidden code will produce the outcomes.
+    # Run this cell to print the outcomes.
+
+    ====
+    def NoSpaces(text):
+        finalWord = str(text[0])
+        for i in range(1,len(text)):
+            finalWord += str(text[i])
+        return finalWord
+
+    letters = 'ABCDE'
+    for i in letters:
+        for j in letters:
+            for k in letters:
+                word = [i,j,k]
+                print(NoSpaces(word))
+
 
 After you run the above code, copy the printed list and paste it into the input
 area in the analysis tool below.
@@ -109,11 +125,29 @@ The code below will print all the ways to create a three-letter word from
 ``A, B, C, D, E`` if no letter is repeated. Use the analysis tool to answer the
 following questions.
 
-.. countingsheet:: NoRepeats
-  :ncols: 3
-  :col1: A,B,C,D,E
-  :col2: =data1 minus item1
-  :col3: =data1 minus item1 minus item2
+.. activecode:: NoRepeats
+    :coach:
+
+    # Run this cell to print the outcomes.
+
+    ====
+    def NoSpaces(text):
+        finalWord = str(text[0])
+        for i in range(1,len(text)):
+            finalWord += str(text[i])
+        return finalWord
+
+    letters = 'ABCDE'
+    for i in letters:
+        for j in letters:
+            if j not in [i]:
+                for k in letters:
+                    if k not in [i,j]:
+                        word = [i,j,k]
+                        print(NoSpaces(word))
+
+
+
 
 .. analysistool:: NoRepeatsTool
 
@@ -181,11 +215,27 @@ The code below will print all the ways to create a three-letter word from
 ``A, B, C, D, E`` if no letter is repeated and the letters appear in alphabetical
 order (e.g. ``D`` will never come before ``A``).
 
-.. countingsheet:: Greater
-  :ncols: 3
-  :col1: A,B,C,D,E
-  :col2: =data1 after index1 minus item1
-  :col3: =data1 after index2 minus item2
+.. activecode:: Greater
+    :coach:
+
+    # Run this cell to print the outcomes.
+
+    ====
+    def NoSpaces(text):
+        finalWord = str(text[0])
+        for i in range(1,len(text)):
+            finalWord += str(text[i])
+        return finalWord
+
+    letters = 'ABCDE'
+    for i in range(5):
+        for j in range(i+1,5):
+            for k in range(j+1,5):
+                word = [letters[i],letters[j],letters[k]]
+                print(NoSpaces(word))
+
+
+
 
 .. analysistool:: GreaterTool
 
@@ -266,11 +316,27 @@ The code below will print all the ways to create a three-letter word from
 ``A, B, C, D, E`` where the letters appear in alphabetical order (e.g. ``AAB``
 can appear but ``BAA`` cannot).
 
-.. countingsheet:: GreaterEq
-  :ncols: 3
-  :col1: A,B,C,D,E
-  :col2: =data1 after index1
-  :col3: =data1 after index2
+.. activecode:: GreaterEq
+    :coach:
+
+    # Run this cell to print the outcomes.
+
+    ====
+    def NoSpaces(text):
+        finalWord = str(text[0])
+        for i in range(1,len(text)):
+            finalWord += str(text[i])
+        return finalWord
+
+    letters = 'ABCDE'
+    for i in range(5):
+        for j in range(i,5):
+            for k in range(j,5):
+                word = [letters[i],letters[j],letters[k]]
+                print(NoSpaces(word))
+
+
+
 
 .. analysistool:: GreaterEqTool
 

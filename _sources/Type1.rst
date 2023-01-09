@@ -29,14 +29,20 @@ listed as distinct outcomes).
 Active Code 1
 -------------
 
-.. countingsheet:: Type_1_CodeSample1
-  :ncols: 5
-  :col1: 0,1
-  :col2: 0,1
-  :col3: 0,1
-  :col4: 0,1
-  :col5: 0,1
+.. activecode:: Type_1_CodeSample1
+   :coach:
+   :caption: Code that generates length 5 binary strings
 
+   Digits = [0,1]
+   counter = 0
+   for i in Digits:
+       for j in Digits:
+           for k in Digits:
+               for l in Digits:
+                   for m in Digits:
+                       print(i,j,k,l,m)
+                       counter += 1
+   print(counter)
 
 Now, answer the following questions about these outcomes You can use this analysis tool to answer them.
 
@@ -146,7 +152,7 @@ Quick Check 3.1
    :feedback_d: Correct. There are 6 options for what will come up on a given roll, one for each face of the dice.
 
    If you were to write code to produce outcomes, how many elements would you
-   have in your starting column?
+   have in your starting list?
 
 Quick Check 3.2
 ----------------
@@ -162,7 +168,7 @@ Quick Check 3.2
    :feedback_c: Incorrect.
    :feedback_d: Incorrect.
 
-   If you were to write code to produce outcomes, how many columns
+   If you were to write code to produce outcomes, how many for loops
    would you have?
 
 Quick Check 3.3
@@ -188,8 +194,11 @@ code that generates all possible outcomes for rolling a 6-sided dice four consec
 Active Code
 -------------
 
-.. countingsheet:: CodeSample3
-  :ncols: 4
+.. activecode:: CodeSample3
+   :coach:
+   :caption: Code that counts four consecutive dice rolls
+
+
 
 Now, consider a couple of variations on this problem. ::
 
@@ -244,9 +253,10 @@ Quick Check 5.1
 
 Active Code 4
 --------------
-.. countingsheet:: Codesample4
-  :ncols: 3
 
+.. activecode:: Codesample4
+  :coach:
+  :caption: Code that generates outcomes of rolling a 20-sided dice three times.
 
   Quick Check 5.1
   ----------------
@@ -386,30 +396,43 @@ of license plates is :math:`26^3 \cdot 10^3 + 10^3 \cdot 26^3 = 35,152,000`.
 
 Now let's try another problem. ::
 
-  8. At my bank, a PIN consists of 4 digits (from 0 to 4). How many PINs
+  8. At my bank, a PIN consists of 4 digits (from 0 to 9). How many PINs
   are there with no consecutive digits?
 
 Note, here, we can apply our formula. We can think of a 4-stage process, where
 in each stage we consider the number of options for each respective digit
 (first, second, third, and fourth). In the first stage we can choose any number,
-so there are 5 options. In the second stage, we can choose any number except
-what was chosen first, so there are 4 options. In the third stage, we can choose
-any number except what was chosen directly previously, so again there are 4
-options. In the fourth stage, again we have 4 options.
+so there are 10 options. In the second stage, we can choose any number except
+what was chosen first, so there are 9 options. In the third stage, we can choose
+any number except what was chosen directly previously, so again there are 9
+options. In the fourth stage, again we have 9 options.
 
-So, our final answer is :math:`5 \cdot 4^3 = 320`.
+So, our final answer is :math:`10 \cdot 9^3 = 7,290`.
 
-Run the code and examine the output.
+To code this, note that for our later stages we include a conditional statement
+that doesn't allow for the previous letter to be included. Run the code and
+examine the output.
 
 Active Code 5
 --------------
 
-.. countingsheet:: CodeSample5
-  :ncols: 4
-  :col1: 0,1,2,3,4
-  :col2: =data1 minus item1
-  :col3: =data1 minus item2
-  :col4: =data1 minus item3
+.. activecode:: CodeSample5
+   :coach:
+   :caption: Code that counts PIN numbers with no consecutive digits.
+
+   Digits = [0,1,2,3,4,5,6,7,8,9]
+   counter = 0
+
+   for i in Digits:
+       for j in Digits:
+           if j != i:
+               for k in Digits:
+                   if k != j:
+                       for l in Digits:
+                           if l != k:
+                               print(i,j,k,l)
+                               counter += 1
+   print(counter)
 
 
 Quick Check 8.1
@@ -423,7 +446,7 @@ Quick Check 8.1
   :answer_d: It makes sure the third digit is not the same as either of the first two digits.
   :feedback_a: Incorrect.
   :feedback_b: Incorrect.
-  :feedback_c: Correct. All we need for this problem to ensure non-consecutivity is to have each digit not be equal to the digit directly preceding it.
+  :feedback_c: Correct. All we need for this problem to ensure non-consecutivity is to have each digit not be equal to the digit directly preceding it. Thus, "if k != j" ensures the third digit is not the same as the second digit.
   :feedback_d: Incorrect.
 
-  What does the statement "minus item2" accomplish?
+  What does the conditional statement "if k != j" accomplish?

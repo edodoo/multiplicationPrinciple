@@ -43,11 +43,20 @@ are produced, and to see what the total is.
 Arrangements with repetition - Type 1 code sample
 ---------------------------------------------------
 
-.. countingsheet:: FourPT_Type1_Code1
-  :ncols: 3
-  :col1: 1,2,3,4,5
-  :col2: 1,2,3,4,5
-  :col3: 1,2,3,4,5
+.. activecode:: FourPT_Type1_Code1
+   :coach:
+   :caption: 3-character strings, repetition allowed
+
+   Numbers = [1,2,3,4,5]
+   Counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           for k in Numbers:
+               print(i,j,k)
+               Counter = Counter + 1
+   print(Counter)
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Type 2 Problems (Arrangement without repetition)
@@ -67,11 +76,21 @@ to see the kinds of outcomes that are produced, and to see what the total is.
 Arrangements without repetition - Type 2 code sample
 -----------------------------------------------------
 
-.. countingsheet:: FourPT_Type2_Code1
-  :ncols: 3
-  :col1: 1,2,3,4,5
-  :col2: =data1 minus item1 
-  :col3: =data1 minus item1 minus item2
+.. activecode:: FourPT_Type2_Code1
+   :coach:
+   :caption: 3-character strings, repetition not allowed
+
+   Numbers = [1,2,3,4,5]
+   Counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j != i:
+               for k in Numbers:
+                   if k != j and k != i:
+                       print(i,j,k)
+                       Counter = Counter + 1
+   print(Counter)
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Type 3 Problems (Selection without repetition)
@@ -90,11 +109,22 @@ to see the kinds of outcomes that are produced, and to see what the total is.
 Arrangements without repetition - Type 3 code sample
 -----------------------------------------------------
 
-.. countingsheet:: FourPT_Type3_Code1
-  :ncols: 3
-  :col1: 1,2,3,4,5
-  :col2: =data1 after index1 minus item1 
-  :col3: =data1 after index2 minus item2
+.. activecode:: FourPT_Type3_Code1
+   :coach:
+   :caption: 3-character subsets, repetition not allowed
+
+   Numbers = [1,2,3,4,5]
+   Counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j > i:
+               for k in Numbers:
+                   if k > j:
+                       print(i,j,k)
+                       Counter = Counter + 1
+   print(Counter)
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Type 4 Problems (Selection with repetition)
@@ -113,11 +143,22 @@ to see the kinds of outcomes that are produced, and to see what the total is.
 Arrangements without repetition - Type 4 code sample
 -----------------------------------------------------
 
-.. countingsheet:: FourtPT_Type4_Code1
-  :ncols: 3
-  :col1: 1,2,3,4,5
-  :col2: =data1 after index1
-  :col3: =data1 after index2
+.. activecode:: FourPT_Type4_Code1
+   :coach:
+   :caption: 3-character subsets, repetition not allowed
+
+   Numbers = [1,2,3,4,5]
+   Counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j >= i:
+               for k in Numbers:
+                   if k >= j:
+                       print(i,j,k)
+                       Counter = Counter + 1
+   print(Counter)
+
 
 We note further that for each of these four problem types, there tend to be corresponding
 canonical types of outcomes – for example, permutations tend to count strings or
@@ -180,21 +221,24 @@ A. Students can win more than one prize
 ----------------------------------------
 Complete the code below to list all of the possibilities for Problem A above.
 
-.. countingsheet:: FourPT_Type1_Code2
-  :ncols: 3
-  :col1: 1,2,3,4,5,6,7,8
-  :col2: =data1
-  :col3: =data1
+.. activecode:: FourPT_Type1_Code2
+   :coach:
+   :caption: Students can win more than one prize
+
+   Students = [1,2,3,4,5,6,7,8]
+   Counter = 0
+
 
 B. Students can win at most one prize
 --------------------------------------
 Complete the code below to list all of the possibilities for Problem B above.
 
-.. countingsheet:: FourPT_Type2_Code2
-  :ncols: 3
-  :col1: 1,2,3,4,5,6,7,8
-  :col2: =data1 minus item1
-  :col3: =data1 minus item1 minus item2
+.. activecode:: FourPT_Type2_Code2
+  :coach:
+  :caption: Students can win at most one prize
+
+  Students = [1,2,3,4,5,6,7,8]
+  Counter = 0
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Differences between Type 2 and Type 3
@@ -223,15 +267,24 @@ C. Athletes receiving gold, silver, and bronze medals
 ------------------------------------------------------
 Complete the code below to list all of the possibilities for Problem C above.
 
-.. countingsheet:: FourPT_Type2_Code3
-  :ncols: 3
+.. activecode:: FourPT_Type2_Code3
+   :coach:
+   :caption: Athletes receive gold, silver, or bronze medals
+
+   Students = [1,2,3,4,5,6,7,8,9,10]
+   Counter = 0
+
 
 D. Athletes receiving any medal
 --------------------------------------
 Complete the code below to list all of the possibilities for Problem 1 above.
 
-.. countingsheet:: FourPT_Type3_Code2
-  :ncols: 3
+.. activecode:: FourPT_Type3_Code2
+  :coach:
+  :caption: Athletes receive a medal
+
+  Students = [1,2,3,4,5,6,7,8,9, 10]
+  Counter = 0
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Differences between Type 3 and Type 4
@@ -258,12 +311,20 @@ E. Donuts from last six remaining
 ------------------------------------------------------
 Complete the code below to list all of the possibilities for Problem C above.
 
-.. countingsheet:: FourPT_Type3_Code3
- :ncols: 5
+.. activecode:: FourPT_Type3_Code3
+ :coach:
+ :caption: Choosing donuts
+
+ Students = [1,2,3,4,5,6]
+ Counter = 0
 
 F. Donuts from six kinds remaining
 --------------------------------------
 Complete the code below to list all of the possibilities for Problem 1 above.
 
-.. countingsheet:: FourPT_Type4_Code2
-   :ncols: 3
+.. activecode:: FourPT_Type4_Code2
+   :coach:
+   :caption: Choosing from types of donuts
+
+   Students = [1,2,3,4,5,6]
+   Counter = 0

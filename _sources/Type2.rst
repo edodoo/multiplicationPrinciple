@@ -21,7 +21,10 @@ particular element was chosen at each stage, the number of options are
 independent, and so we can use the multiplication principle. We get
 :math:`4 \cdot 3 \cdot 2 \cdot 1 = 24` total outcomes.
 
-Below is some code that generates all of the outcomes.
+Below is some code that generates all of the outcomes. The j != i is means j is
+not equal to i. This ensures that the choice for the second position will not
+be equal to the choice for the first position. Thus, these conditional statements
+ensure that an element cannot be repeated.
 
 Notice the outcomes themselves - repetition is not allowed (we do not get
 something like 1 1 1 1 or 2 4 1 4), and we are counting ordered outcomes
@@ -30,12 +33,23 @@ something like 1 1 1 1 or 2 4 1 4), and we are counting ordered outcomes
 Active Code
 ------------
 
-.. countingsheet:: Type_2_CodeSample1
-    :ncols: 4
-    :col1: 1,2,3,4
-    :col2: =data1 minus item1
-    :col3: =data1 minus item1 minus item2
-    :col4: =data1 minus item1 minus item2 minus item3
+.. activecode:: Type_2_CodeSample1
+   :coach:
+   :caption: Create some code
+
+   Numbers = [1, 2, 3, 4]
+   counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j != i:
+               for k in Numbers:
+                   if k != j and k != i:
+                       for l in Numbers:
+                           if l != k and l != j and l != i:
+                               print(i,j,k,l)
+                               counter += 1
+   print(counter)
 
 As another example, consider the following problem. ::
 
@@ -56,8 +70,10 @@ and look at the outcomes to see if the output makes sense.
 
 Active Code
 ------------
-.. countingsheet::  Type_2_CodeSample2
-    :ncols: 3
+
+.. activecode:: Type_2_CodeSample2
+   :coach:
+
 
 ::
 
@@ -74,13 +90,35 @@ First, make a guess as to what you think the total will be. Write it here.
        :x: Incorrect. The answer is 120.
 
 
-Fill in the code below, but do not run it, and then answer the following questions.
+Here is some code that will solve the problem. Do not run it, but answer questions
+about it below.
 
 Active Code
 ------------
 
-.. countingsheet:: Type_2_CodeSample3
-    :ncols: 5
+.. activecode:: Type_2_CodeSample3
+   :coach:
+   :caption: Create some code
+
+   Rocket = ['R', 'O', 'C', 'K', 'E', 'T']
+   counter = 0
+
+   for i in Rocket:
+       for j in Rocket:
+           if j != i:
+               for k in Rocket:
+                   if k != j and k != i:
+                       for l in Rocket:
+                           if l != k and l != j and l != i:
+                               for m in Rocket:
+                                   if m != l and m != k and m != j and m != i:
+                                       for n in Rocket:
+                                           if n != m and n != l and n != k and n != j and n != i:
+                                               print(i,j,k,l,m,n)
+                                               counter += 1
+   print(counter)
+
+
 
 Quick Check 1.1
 ----------------
@@ -150,12 +188,15 @@ and 8 options for third. Our expression is :math:`9 \cdot 8 \cdot 7 = 504`.
 Write some code to solve this problem (remixing code from previous problems if
 you wish).
 
-.. countingsheet:: Type_2_CodeSample4
-   :ncols: 3
+.. activecode:: Type_2_CodeSample4
+   :coach:
+   :caption: Create some code to answer the Horse Race problem
+
+
 
 .. shortanswer:: short-ex1
 
-   In the space below, explain how you know how many columns your code
+   In the space below, explain how you know how many nested for loops your code
    should have.
 
 ::
@@ -233,17 +274,35 @@ Here we have two cases - when the Ts are at the beginning of the word and when
 the Ts are at the end of the word. If the Ts are at the beginning, there are 4!
 ways to arrange the rest of the letters, and if the Ts are at the end, there are
 4! ways to arrange the rest of the letters. We can add these two distinct cases,
-so we get a final expression of :math:`4! + 4! = 48`. The program below lists the first case of these
-outcomes. How would the code change if we were counting the second case?
+so we get a final expression of :math:`4! + 4! = 48`. The program below lists these
+outcomes.
 
-.. countingsheet:: Cattle
-    :ncols: 6
-    :col1: T
-    :col2: T
-    :col3: C,A,L,E
-    :col4: =data3 minus item3
-    :col5: =data3 minus item3 minus item4
-    :col6: =data3 minus item3 minus item4 minus item5
+.. activecode:: Cattle
+    :coach:
+
+    letters = ['C','A','L','E']
+    counter=0
+
+    for i in letters:
+        for j in letters:
+            if j!=i:
+                for k in letters:
+                    if k!=i and k!=j:
+                        for l in letters:
+                            if l!=i and l!=j and l!=k:
+                                print('T','T',i,j,k,l)
+                                counter+=1
+    for a in letters:
+        for b in letters:
+            if b!=a:
+                for c in letters:
+                    if c!=a and c!=b:
+                        for d in letters:
+                            if d!=a and d!=b and d!=c:
+                                print(a,b,c,d,'T','T')
+                                counter+=1
+    print(counter)
+
 
 ::
 

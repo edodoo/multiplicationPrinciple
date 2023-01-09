@@ -71,16 +71,28 @@ all the tops are the same, and in any column all the bottoms are the same. We co
 created this table one row at a time, where for every option of top we cycled through
 every option of bottom. Let's carry out this counting process using computer code.
 
-Examine the code below. After you run it, compare the result to the table above and relate
+Examine the code below, and consider how the nested lines that say ``for i in Tops:``
+and ``for j in Bottoms:`` may correspond to the process of cycling through every possibility for a bottom
+for every possibility of top. After you run it, compare the result to the table above and relate
 the result to the mathematical expression :math:`4\times 3` .
 
 Tops and Bottoms
 ~~~~~~~~~~~~~~~~~
 
-.. countingsheet:: CodeSampleMult1
-  :ncols: 2
-  :col1: tee,sweater,tank,blouse
-  :col2: shorts,capris,jeans
+.. activecode:: CodeSampleMult1
+   :coach:
+   :caption: Code that generates possible outfits
+
+   Tops = ['tee', 'sweater','tank', 'blouse']
+   Bottoms = ['shorts', 'capris', 'jeans']
+   counter=0
+
+   for i in Tops:
+       for j in Bottoms:
+           print(i,j)
+           counter+=1
+   print(counter)
+
 
 
 Problem 2: Outfits Part 2
@@ -210,11 +222,20 @@ as the numbers 1 through 6, and the ways to choose a letter from the alphabet as
 the numbers 1 through 26. Predict the first five outcomes of the code before you
 run it.
 
-.. countingsheet:: CodeSampleMult3
-  :ncols: 3
-  :col1: H,T
-  :col2: 1,2,3,4,5,6
-  :col3: 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26
+.. activecode:: CodeSampleMult3
+  :coach:
+
+  Coin = ['H', 'T']
+  Dice = range(1,7)
+  Letters = range(1,27)
+  counter = 0
+
+  for i in Coin:
+      for j in Dice:
+          for k in Letters:
+              print(i,j,k)
+              counter+=1
+  print(counter)
 
 .. mchoice:: MP_4
     :correct: b
@@ -227,7 +248,7 @@ run it.
 
     As you scroll through the output of the above code, you may notice that the outcomes
     are split into two groups--those that start with "T" and those that start with "H".
-    How many outcomes are there that start with "T"? (Use the analysis tool to answer this question!)
+    How many outcomes are there that start with "T"?
 
 Here is a bit more practice.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -246,8 +267,8 @@ Here is a bit more practice.
     types of pants does the store have? You can check your work by writing
     code in the cell below if you wish.
 
-.. countingsheet:: CodeSampleMult4
-  :ncols: 4
+.. activecode:: CodeSampleMult4
+  :coach:
 
 
 .. mchoice:: MP_6
@@ -261,6 +282,22 @@ Here is a bit more practice.
 
     How many nonempty collections of letters can be formed from three As and five Bs?
     Hint: this problem is very similar to, but not exactly, a Cartesian Product problem.
+    You can use the code below to check your work.
+
+.. activecode:: CodeSampleMult5
+    :coach:
+    :Caption: Does this count all nonempty collections letters formed from 3 As and 5 Bs?
+
+    A = [0,1,2,3]
+    B = [0,1,2,3,4,5]
+    counter=0
+
+    for i in A:
+        for j in B:
+            if i!=0 or j!=0:
+                print(i,j)
+                counter+=1
+    print(counter)
 
 Cartesian Products with copies of the same set
 -------------------------------------------------
@@ -302,10 +339,32 @@ Problem 5: Quiz Questions
   On a quiz, there are 6 True/False questions. How many ways can a student
   finish the quiz, if they put an answer for every question?
 
-  For the above question, fill in the code below and use the analysistool to count the number of outcomes.
+For the Quiz Questions problem above, solve the Parson's problem below by
+arranging the given lines of code.
 
-  .. countingsheet:: CodeSampleMult5
-    :ncols: 6
+.. parsonsprob:: QQ_Parson1
+   :numbered: left
+
+   Arrange the lines below to create code to print the outcomes above
+   -----
+
+   Answers = ['T','F']
+   =====
+   counter = 0
+   =====
+   for i in Answers:
+       for j in Answers:
+   =====
+           for k in Answers:
+               for l in Answers:
+   =====
+                   for m in Answers:
+                       for n in Answers:
+   =====
+                           print(i,j,k,l,m,n)
+                           counter = counter+1
+   =====
+   print(counter)
 
 
 Here is another problem that will set us up well for more discussions about the MP.
@@ -317,11 +376,16 @@ Problem 6: 3-Digit Sequences
 
 For the 3-Digit Sequences problem, write some code that prints the possible outcomes.
 
-.. countingsheet:: CodeSampleMult6
-  :ncols: 3
+.. activecode:: CodeSampleMult7
+  :coach:
+  :caption: Possible 3-letter sequences
 
+  Letters = ['a','b','c','d','e','f']
+  counter = 0
 
-Check your work by answering the following multiple choice problem and using the analysistool:
+  %Finish the code here
+
+Check your work by answering the following multiple choice problem:
 
 .. mchoice:: MP_7
     :correct: c
@@ -381,21 +445,31 @@ fulfill our second case. Because the two cases are distinct and the two cases de
 all ways to select a face card and a heart, then there are :math:`9\times 13 + 3\times
 12 = 153` ways to select a face card and a heart card.
 
-The code below gives this, with a cell for each part. Use the analysistool to count the outcomes and verify it is correct.
-
-.. countingsheet:: CodeSampleMP8part01
-  :ncols: 2
-  :col1: SJ,SQ,SK,DJ,DQ,DK,CJ,CQ,CK
-  :col2: HA,H2,H3,H4,H5,H6,H7,H8,H9,H10,HJ,HQ,HK
+The code below gives. Notice how the sets of nested loops and the sets of sequential loops
+reflect the instances in which we are using multiplication and addition in our solution.
 
 
-Now, examine the code below where calculate the second part of the sum above.
+.. activecode:: CodeSampleMP8
+  :coach:
+  :caption: Code that lists the outcomes for the Cards problem
 
-.. countingsheet:: CodeSampleMP8part02
-  :ncols: 3
-  :col1: HA,H2,H3,H4,H5,H6,H7,H8,H9,H10,HJ,HQ,HK
-  :col2: =spec3 minus item1
-  :col3: ~HJ,HQ,HK
+  Heart = ['HA','H2','H3','H4','H5','H6','H7','H8','H9','H10','HJ','HQ','HK']
+  HeartFace = ['HJ','HQ','HK']
+  NonHeartFace = ['SJ','SQ','SK','DJ','DQ','DK','CJ','CQ','CK']
+  total = 0
+
+  for i in NonHeartFace:
+      for j in Heart:
+          print(i,j)
+          total = total+1
+  for i in HeartFace:
+      for j in Heart:
+          if i != j:
+              print(i,j)
+              total = total+1
+  print(total)
+
+
 
 Applying the MP to other types of problems
 --------------------------------------------
@@ -458,11 +532,32 @@ Here is one way to list all such outcomes:
 
 
 The above list is truncated so that it doesn't take too much space on the page.
-Fill out the code below so that the above outcomes are the output of the program.
+Solve the following Parsons problem by arranging the given lines so that the code
+will print the above outcomes (including those not listed).
 
-.. countingsheet:: CodeSampleMP805
-  :ncols: 3
+.. parsonsprob:: SM_Parson1
+   :numbered: left
 
+   Arrange the lines below to create code to print the outcomes above
+   -----
+
+   Numbers = [0,1,2,3,4,5,6,7,8,9]
+   =====
+   counter = 0
+   =====
+   for i in Numbers:
+   =====
+       for j in Numbers:
+   =====
+           if j not in [i]:
+   =====
+               for k in Numbers:
+   =====
+                   if k not in [i,j]:
+   =====
+                       print(i,j,k)
+   =====
+   print(counter)
 
 Problem 9: How to appoint roles among your friends
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -479,11 +574,19 @@ your Captain: for every possible Captain, there are four possible people you can
 choose for President. Thus, we can still apply the MP to solve this problem, finding that there are
 :math:`5\times 4 = 20` ways to choose a best friend and a person to ostracize.
 
-The code below solves provides this problem. Note that the "minus item1" ensures that we
+The code below solves provides this problem. Note that the "j!=i" ensures that we
 will not pick the same person as President who is already Captain.
 
-.. countingsheet:: CodeSampleMP9
-  :ncols: 2
-  :col1: Rocket,Groot,Gamora,Drax,Peter
-  :col2: =col1 minus item1
+.. activecode:: CodeSampleMP9
+  :coach:
+  :caption: Code that gives possible choices of Captain and President from five friends.
 
+  Friends = ['Rocket','Groot','Drax','Gamora','Peter']
+  total = 0
+
+  for i in Friends:
+      for j in Friends:
+          if j !=i:
+             print(i,j)
+             total = total+1
+  print(total)

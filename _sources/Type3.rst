@@ -31,11 +31,21 @@ If we look at the outcomes of this process, notice that we get outcomes like 123
 Active Code 1
 --------------
 
-.. countingsheet:: Type_3_CodeSample1
-    :ncols: 3
-    :col1: 1,2,3,4,5
-    :col2: =data1 minus item1
-    :col3: =data1 minus item1 minus item2
+.. activecode:: Type_3_CodeSample1
+   :coach:
+   :caption: Create some code
+
+   Numbers = [1, 2, 3, 4, 5]
+   counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j != i:
+               for k in Numbers:
+                   if k != j and k != i:
+                       print(i,j,k,)
+                       counter += 1
+   print(counter)
 
 In the above problem, note that for any given set of digits, such as {1, 2, 3},
 there are 6 total outcomes in the list of ordered outcomes that contain these three digits.
@@ -144,7 +154,7 @@ them in increasing number. By choosing to create sequences of
 numbers in increasing order, we are ensuring that we will never produce the same
 outcome twice. The program below will generate exactly the
 combinations we want, which are strictly increasing sequences of numbers. The use
-of the "after" statement ensures that the numbers in a given position will
+of the if statement using :math:`j > i` ensures that the numbers in a given position will
 be greater than the values in all of the previous positions, and this means that we
 have strictly increasing sequences.
 
@@ -157,10 +167,19 @@ see a structure of :math:`5+4+3+2+1` in the outcomes?
 Active Code 2
 --------------
 
-.. countingsheet:: Type_3_CodeSample2
-    :ncols: 2
-    :col1: 1,2,3,4,5,6
-    :col2: =data1 after index1 minus item1
+.. activecode:: Type_3_CodeSample2
+   :coach:
+   :caption: Create some code
+
+   Numbers = [1, 2, 3, 4, 5, 6]
+   counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j > i:
+               print(i,j)
+               counter += 1
+   print(counter)
 
 Let us try to extend this idea by answering the following question: ::
 
@@ -184,11 +203,22 @@ this expression reflected in the structure of the outcomes.
 Active Code 3
 --------------
 
-.. countingsheet:: Type_3_CodeSample3
-    :ncols: 3
-    :col1: 1,2,3,4,5,6
-    :col2: =data1 after index1 minus item1
-    :col3: =data1 after index2 minus item2
+.. activecode:: Type_3_CodeSample3
+   :coach:
+   :caption: Create some code
+
+   Numbers = [1, 2, 3, 4, 5, 6]
+   counter = 0
+
+   for i in Numbers:
+       for j in Numbers:
+           if j > i:
+               for k in Numbers:
+                   if k > j:
+                       print(i,j,k,)
+                       counter += 1
+   print(counter)
+
 
 Check your knowledge using the problem below:
 
@@ -199,8 +229,8 @@ Check your knowledge using the problem below:
 
    -   :3: Correct.
        :x: Incorrect. The answer is 3=2+1.
-   -   :2: Correct.
-       :x: Incorrect. The answer is 2.
+   -   :1: Correct.
+       :x: Incorrect. The answer is 1.
 
 Some Practice Problems
 -----------------------
@@ -217,6 +247,29 @@ chosen from 20 people.
 
 We can employ our general formula to get :math:`{20 \choose 4} = \frac{20!}{16!\cdot4!} = 4,845.`
 
+We can check our work by running a program, as seen below.
+
+Active Code 4
+--------------
+
+.. activecode:: Type_3_CodeSample4
+   :coach:
+   :caption: Create some code
+
+   People = range(1,21)
+   counter = 0
+
+   for i in People:
+       for j in People:
+           if j > i:
+               for k in People:
+                   if k > j:
+                       for l in People:
+                           if l > k:
+                               #print(i,j,k,l)
+                               counter += 1
+   print(counter)
+
 ::
 
   5. A Poker hand consists of a set of 5 cards from a standard 52-card deck.
@@ -225,13 +278,38 @@ We can employ our general formula to get :math:`{20 \choose 4} = \frac{20!}{16!\
 Here we must just choose 5 cards from 52 cards, so we get :math:`{52 \choose 5} =
 \frac{52!}{47!\cdot5!} = 2,598,960.`
 
+The following code yields this same result.
+
+Active Code 5
+--------------
+
+.. activecode:: Type_3_CodeSample5
+   :coach:
+   :caption: Create some code
+
+   Cards = range(1,53)
+   counter = 0
+
+   for i in Cards:
+       for j in Cards:
+           if j > i:
+               for k in Cards:
+                   if k > j:
+                       for l in Cards:
+                           if l > k:
+                               for m in Cards:
+                                   if m > l:
+                                       #print(i,j,k,l)
+                                       counter += 1
+   print(counter)
+
 Many problems will not be only a direct application of this formula, but rather
 they will involve or incorporate the formula in some way into a broader problem.
 Here we offer some examples of how this formula might arise or be used in problems.
 
 ::
 
-  6. I have 12 books. I want to give three of them away to my friend John, and I
+  5. I have 12 books. I want to give three of them away to my friend John, and I
   want to give six of them away to my friend Craig. How many possible outcomes are
   there for giving my books away?
 
@@ -244,7 +322,7 @@ answer is :math:`{12 \choose 3} \cdot {9 \choose 6} = 18,480`.
 
 ::
 
-  7. We have 6 Moms, 6 Dads, and 8 children to choose from. We need to make a
+  6. We have 6 Moms, 6 Dads, and 8 children to choose from. We need to make a
   committee of size 7, with exactly 2 Dads, 3 Moms, and 2 children. How many ways
   are there to do this?
 
